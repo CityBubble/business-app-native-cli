@@ -1,2 +1,2 @@
 # business-app-native-cli
-React-Native Cli for business ap
+React-Native Cli for business app
