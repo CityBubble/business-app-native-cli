@@ -2,29 +2,29 @@ import {StyleSheet} from 'react-native'
 
 
 const styles = StyleSheet.create({
-    UnderReviewScreen_container:{
+    UnderReviewScreenContainer:{
         backgroundColor:'#14161d',
         flex:1,
         opacity:1
     },
-    UnderReviewScreen_image:{
+    UnderReviewScreenImage:{
         
         alignItems:'center',
         top:91,
         opacity:0.9
     },
-    UnderReviewScreen_text:{
+    UnderReviewScreenText:{
         top:190,
         alignItems:'center',
     },
-    text_heading:{
+    textHeading:{
         fontSize:28,
         fontWeight:'600',
         color:'#fff',
         letterSpacing:0.75,
         padding:10
     },
-    text_paragraph:{
+    textParagraph:{
         color:'#fff',
         fontSize:18,
         letterSpacing:0.68,

@@ -1,18 +1,18 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 
 const styles = StyleSheet.create({
-    headerContainer:{
-        flexDirection:'row',
-        alignItems:'center', 
+    headerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
     },
-    headerImage:{
-        marginLeft:40
+    headerImage: {
+        left: 40
     },
-    logo:{
-        marginLeft:111
+    logo: {
+        left: 151
     }
 })
-    
+
 
 export default styles

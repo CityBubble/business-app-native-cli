@@ -6,7 +6,7 @@ import InputBox from '../components/Inputbox'
 import Header from '../components/Header'
 import registerAddressStyles from '../styles/RegisterAddress'
 import Button from '../components/Button'
-
+ 
 
 const RegisterAddressScreen = ({ navigation }) => {
 
@@ -15,7 +15,7 @@ const RegisterAddressScreen = ({ navigation }) => {
 
                   <View>
                         <Header
-                              onPress={() => navigation.navigate('Register')}
+                              onPress={() => navigation.navigate('RegisterScreen')}
                         />
                   </View>
                   <View style={registerAddressStyles.registerScreenInput}>
@@ -59,9 +59,9 @@ const RegisterAddressScreen = ({ navigation }) => {
                                                 Title="Address" />
                                     </View>
                               </Card>
-                           
+
                         </View>
-                              <Button title="Next" onPress={() => { navigation.navigate('Proofs') }} />
+                        <Button title="Next" onPress={() => { navigation.navigate('ProofScreen') }} />
                   </View>
             </SafeAreaView>
       )

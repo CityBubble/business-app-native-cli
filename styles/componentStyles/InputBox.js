@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         minHeight: 30,
         height: 50
     },
-    input: {
+    Input: {
         color: '#fff',
         padding: 12,
         fontSize: 16,

@@ -7,8 +7,8 @@ import { Image } from 'react-native'
 import { FontAwesome } from 'react-native-vector-icons'
 import otpStyles from '../styles/Otp'
 
-const otp = ({ route, navigation} ) => {
-    
+const Otp = ({ route, navigation }) => {
+
     let textInput = useRef(null)
     let clockCall = null
     const lengthInput = 6;
@@ -18,16 +18,16 @@ const otp = ({ route, navigation} ) => {
     const [countdown, setcountdown] = useState(defaultCountdown)
     const [enableResend, setEnableResend] = useState(false)
     const [wrongOtp, setWrongotp] = useState(false)
-    
-    let data= route.params
-    let number=data.phonenumber
-    let phonenumber={phonenumber:number}
+
+    let data = route.params
+    let number = data.phonenumber
+    let phonenumber = { phonenumber: number }
     const onChangeText = (val) => {
         setOtpVal(val)
         // setOtpVal((OtpVal) => val);
         if (val.length === lengthInput && val === Otp) {
-            navigation.replace('Register',{phonenumber})
-         
+            navigation.replace('RegisterScreen', { phonenumber })
+
         }
         else if (val.length === lengthInput && val !== Otp) {
             setWrongotp(true)
@@ -36,7 +36,7 @@ const otp = ({ route, navigation} ) => {
     }
 
     const TextCondition = () => {
-        if (wrongOtp===false) {
+        if (wrongOtp === false) {
             return (
                 <View>
                     <Text style={otpStyles.otpHeading}>Enter the OTP</Text>
@@ -49,10 +49,13 @@ const otp = ({ route, navigation} ) => {
         }
 
         else {
-            return(   <View>
-                <Text style={otpStyles.otpHeading}>Oops !! It's an invalid OTP!</Text>
-                <FontAwesome name="exclamation-triangle" size={56} color="#FD003A" style={otpStyles.icons} />
-            </View>)
+            return (
+                <View >
+                    <Text style={otpStyles.otpHeading}>Oops !! It's an invalid OTP!</Text>
+                    <FontAwesome name="exclamation-triangle" size={56} color="#FD003A" style={otpStyles.icons} />
+                </View>
+            )
+
         }
     }
 
@@ -129,4 +132,4 @@ const otp = ({ route, navigation} ) => {
     )
 }
 
-export default otp
+export default Otp

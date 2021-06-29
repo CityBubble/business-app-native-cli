@@ -3,13 +3,13 @@ import {StyleSheet} from 'react-native'
 
 
 
-const styles = StyleSheet.create({
-    Proofs_container: {
+const Proofstyles = StyleSheet.create({
+    proofsContainer: {
       flex: 1,
       backgroundColor: '#14161D'
     },
   
-    Cards_uploads: {
+    cardsUploads: {
       backgroundColor: 'transparent',
       borderRadius: 12,
       width: 261,
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   
     ,
   
-    InputContainer_Logo: {
+    inputContainerLogo: {
       alignItems: 'center',
       top: 35,
       borderWidth: 1,
@@ -30,22 +30,22 @@ const styles = StyleSheet.create({
       borderStyle: 'dotted'
   
     },
-    Proofs_container_input: {
+    proofsContainerInput: {
   
       alignItems: 'center',
   
     },
-    card_text: {
+    cardText: {
       color: '#fff',
       left: 12,
       fontSize: 17
   
     },
-    Card_button_text: {
+    cardButtonText: {
       color: '#fff',
       textAlign: 'center'
     },
-    Button_delete: {
+    buttonDelete: {
       borderWidth: 1,
       borderColor: '#424CEB',
       borderRadius: 6,
@@ -53,34 +53,44 @@ const styles = StyleSheet.create({
       padding: 6,
       left: 15
     },
-    Card_button: {
+    cardButton: {
       borderWidth: 1,
       borderColor: '#424CEB',
       borderRadius: 6,
-      width: 90,
+      width: 100,
       padding: 6,
   
     },
-    Button_text: {
+    cardButtonCamera: {
+      borderWidth: 1,
+      borderColor: '#424CEB',
+      borderRadius: 6,
+      width: 100,
+      padding: 6,
+      left:10
+  
+    },
+    buttonText: {
       color: '#fff',
       textAlign: 'center'
     },
-    content_card: {
+    contentCard: {
       flexDirection: 'row',
       alignItems: 'center',
       top: 10
     }
-    , image_upload: {
+    , imageUpload: {
       width: 330,
       height: 180,
       borderTopLeftRadius: 12,
       borderTopRightRadius: 12
     },
-    ButtonContainer: {
+    buttonContainer: {
       flexDirection: 'row',
-      top: 12
+      top: 12,
+      
     },
-    Button: {
+    button: {
       top: 90
     },
     checkboxContainer: {
@@ -91,7 +101,7 @@ const styles = StyleSheet.create({
   
   }
   ,
-  checkboclabel: {
+  checkboxLabel: {
       color: '#BFBFBF',
       width: 264,
       textAlign: 'left',
@@ -102,4 +112,4 @@ const styles = StyleSheet.create({
   })
   
 
-export default styles
+export default Proofstyles

@@ -1,11 +1,11 @@
 import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
-    container_profile: {
+    containerProfile: {
         flex: 1,
         backgroundColor: '#14161d'
     },
-    header_container: {
+    headerContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems:'center',
@@ -17,16 +17,16 @@ const styles = StyleSheet.create({
         right: 30
     },
 
-    Header_image: {
+    HeaderImage: {
         left: 20,
         top: 10
     },
-    profile_picture: {
+    profilePicture: {
         justifyContent: 'center',
         alignItems: 'center',
         top: 40
     },
-    Upload_profile: {
+    UploadProfile: {
 
         alignItems: 'center',
         borderRadius: 100,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         width: 30,
         backgroundColor: '#707070'
     },
-    BussinessName: {
+    bussinessName: {
         color: "#fff",
         letterSpacing: 0.7,
         textAlign: 'center',
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         bottom:10
     },
-    social_media: {
+    socialMedia: {
         flexDirection: 'row',
 top:7
     },
@@ -56,18 +56,18 @@ top:7
         backgroundColor: '#2B2C2E',
         height: 2
     },
-    AccountInformation: {
+    accountInformation: {
         top: 70,
         left: 33
     },
-    AccountInformationHeading: {
+    accountInformationHeading: {
         color: '#fff',
         fontSize: 17,
         fontWeight: '700',
         letterSpacing: 0.48,
 
     },
-    AccountInformationBox: {
+    accountInformationBox: {
         flexDirection: 'row',
         alignItems: 'center',
         top: 19,
@@ -79,7 +79,7 @@ top:7
 
 
     },
-    InfoWrap: {
+    infoWrap: {
         paddingVertical: 12
     }
 

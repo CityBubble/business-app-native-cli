@@ -2,22 +2,22 @@ import {StyleSheet} from 'react-native'
 
 
 const styles = StyleSheet.create({
-    DashboardScreen_container: {
+    dashboardScreenContainer: {
         backgroundColor: '#14161d',
         flex: 1,
 
     },
-    DashboardScreen_Image: {
+    dashboardScreenImage: {
         alignItems: 'center',
         top: 91,
         opacity: 1
     },
-    DashboardScreen_input: {
+    dashboardScreenInput: {
         top: 80,
         alignItems: 'center',
     },
 
-    TextHeading: {
+    textHeading: {
         fontSize: 25,
         fontWeight: '700',
         color: '#fff',
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         padding: 12,
         textAlign:'center'
     },
-    TextParagarph: {
+    textParagarph: {
         color: '#DDDDDD',
         fontSize: 15,
         letterSpacing: 0.36,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         height: 37,
 
     },
-    SvgIcon:{
+    svgIcon:{
         top:14
     }
     ,
@@ -49,10 +49,10 @@ const styles = StyleSheet.create({
        textAlign:'center',
        left:3
     },
-    ImageContainer:{
+    imageContainer:{
         top:50
     },
-    PlansButton:{
+    plansButton:{
         top:89
     }
 

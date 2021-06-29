@@ -39,11 +39,11 @@ const styles = StyleSheet.create({
     underline: {
         top: 32
     },
-    underline_list: {
+    underlineList: {
         top: 52,
        
     },
-    underline_logout: {
+    underlineLogout: {
         top:12,
         left: 2
     },

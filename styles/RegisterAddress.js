@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native'
 
+
 const styles = StyleSheet.create({
       
       registerScreen: {
@@ -8,12 +9,12 @@ const styles = StyleSheet.create({
 
       }, 
       inputContainerInput: {
-          // alignItems: 'center',
-          marginTop: 25
+        marginTop: 25
       },
       Cards: {
           backgroundColor: '#000',
           borderRadius: 12,
+        //   alignItems:'center'
 
       },
       secondCard: {
@@ -28,13 +29,13 @@ const styles = StyleSheet.create({
          fontWeight:'700',
           marginBottom: 10,
           color: '#fff',
-          textAlign: 'left'
+         
       },
       registerTextImage: {
-          flexDirection: 'row',
-          alignItems: 'center',
-          left:10
-      },
+         flexDirection:'row',
+         alignItems:'center',
+         justifyContent:'space-evenly'
+    },
       registerScreenInput: {
             alignItems:'center',
       }

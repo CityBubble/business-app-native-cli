@@ -1,15 +1,15 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import { FontAwesome } from 'react-native-vector-icons'
+
 import styles from '../styles/componentStyles/AccountInformation'
 const AccountInformation = (props) => {
     return (
-        <View style={styles.InformationContainer}>
+        <View style={styles.informationContainer}>
 
-            <Text style={styles.InformationText} >{props.Text}</Text>
+            <Text style={styles.informationText} >{props.Text}</Text>
 
-            <FontAwesome name="chevron-right" size={17} color="#fff" />
-            
+            {/* <FontAwesome name="chevron-right" size={17} color="#fff" /> */}
+
         </View>
     )
 }

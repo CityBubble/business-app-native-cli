@@ -11,7 +11,7 @@ const AccountList = (props) => {
         <Modal transparent visible={props.visible}>
             <View style={styles.modalBackground}>
                 <View style={styles.modalContainer}>
-                    <View style={styles.AccountInfo}>
+                    <View style={styles.accountInfo}>
                         <Avatar
                             rounded
                             source={{
@@ -19,12 +19,12 @@ const AccountList = (props) => {
                             }}
                             size={75}
                         />
-                        <Text style={styles.AccountText}>{props.Text}</Text>
+                        <Text style={styles.accountText}>{props.Text}</Text>
                         <View style={styles.underline}>
                             <Text style={styles.underlineText}></Text>
                         </View>
                     </View>
-                    <View style={styles.AccountList}>
+                    <View style={styles.accountList}>
                         <TouchableOpacity style={styles.list}>
                             <Avatar
                                 rounded
@@ -32,7 +32,7 @@ const AccountList = (props) => {
                                 containerStyle={styles.account}
                                 size={40}
                             />
-                            <Text style={styles.ListText}>Tosib Foods</Text>
+                            <Text style={styles.listText}>Tosib Foods</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.list}>
                             <Avatar
@@ -41,7 +41,7 @@ const AccountList = (props) => {
                                 containerStyle={styles.account}
                                 size={40}
                             />
-                            <Text style={styles.ListText}>King's Bakery</Text>
+                            <Text style={styles.listText}>King's Bakery</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.list}>
                             <Avatar
@@ -50,36 +50,36 @@ const AccountList = (props) => {
                                 containerStyle={styles.account}
                                 size={40}
                             />
-                            <Text style={styles.ListText}>Boss Gym</Text>
+                            <Text style={styles.listText}>Boss Gym</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.list}>
                             <Image  source={require('../assets/profile.png')} style={{width:45 ,height:45}}/>
-                            <Text style={styles.ListText}>Add new account</Text>
+                            <Text style={styles.listText}>Add new account</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={styles.underline_list}>
+                    <View style={styles.underlineList}>
                         <Text style={styles.underlineText}></Text>
                     </View>
-                    <View style={styles.LogoutAccount}>
+                    <View style={styles.logoutAccount}>
                         <TouchableOpacity onPress={props.navigate}>
-                            <Text style={styles.LogoutText}>Logout</Text>
+                            <Text style={styles.logoutText}>Logout</Text>
                         </TouchableOpacity>
-                        <View style={styles.underline_logout}>
+                        <View style={styles.underlineLogout}>
                             <Text style={styles.underlineText}></Text>
                         </View>
                     </View>
-                    <View style={styles.BackAccount}>
+                    <View style={styles.backAccount}>
                         <TouchableOpacity onPress={props.close}>
-                            <Text style={styles.LogoutText}>Dismiss</Text>
-                            <View style={styles.underline_logout}>
+                            <Text style={styles.logoutText}>Dismiss</Text>
+                            <View style={styles.underlineLogout}>
                             <Text style={styles.underlineText}></Text>
                         </View>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.footer}>
-                        <Text style={styles.FooterText}>Privacy Policy</Text>
-                        <Text style={styles.FooterDot} >.</Text>
-                        <Text style={styles.FooterText}>Terms of Service</Text>
+                        <Text style={styles.footerText}>Privacy Policy</Text>
+                        <Text style={styles.footerDot} >.</Text>
+                        <Text style={styles.footerText}>Terms of Service</Text>
                     </View>
                 </View>
             </View>

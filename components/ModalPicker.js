@@ -9,17 +9,17 @@ const HEIGHT = Dimensions.get('window').height;
 
 
 const ModalPicker = (props) => {
-    const onPressItem=(option)=>{
+    const onPressItem = (option) => {
         props.chooseModalVisibility(false);
         props.setchooseCity(option)
     }
-    
-    const option=OPTIONS.map((item,index)=>{
-        return(
-            <TouchableOpacity 
+
+    const option = OPTIONS.map((item, index) => {
+        return (
+            <TouchableOpacity
                 style={modalPickerStyles.option}
                 key={index}
-                onPress={()=>onPressItem(item)}
+                onPress={() => onPressItem(item)}
             >
                 <Text style={modalPickerStyles.text}>
                     {item}
@@ -27,17 +27,17 @@ const ModalPicker = (props) => {
             </TouchableOpacity>
         )
     })
-    
+
     return (
         <TouchableOpacity
             onPress={() => props.chooseModalVisibility(false)}
             style={modalPickerStyles.modalPickerContainer}
         >
-        <View style={[modalPickerStyles.modal,{width:WIDTH-30,height:HEIGHT/6}]}>
-            <ScrollView>
-                {option}
-            </ScrollView>
-        </View>
+            <View style={[modalPickerStyles.modal, { width: WIDTH - 30, height: HEIGHT / 6 }]}>
+                <ScrollView>
+                    {option}
+                </ScrollView>
+            </View>
         </TouchableOpacity>
     )
 }

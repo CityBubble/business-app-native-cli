@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native'
 
 
-const styles = StyleSheet.create({
+const Checkboxstyles = StyleSheet.create({
     checkboxBase:{
         width:20,
         height:20,
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 
 
 
-export default styles
+export default Checkboxstyles
