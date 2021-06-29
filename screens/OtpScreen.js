@@ -4,7 +4,7 @@ import { KeyboardAvoidingView } from 'react-native'
 import { Text, View } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 import { Image } from 'react-native'
-import { FontAwesome } from 'react-native-vector-icons'
+import Icon  from 'react-native-vector-icons/FontAwesome'
 import otpStyles from '../styles/Otp'
 
 const Otp = ({ route, navigation }) => {
@@ -52,7 +52,7 @@ const Otp = ({ route, navigation }) => {
             return (
                 <View >
                     <Text style={otpStyles.otpHeading}>Oops !! It's an invalid OTP!</Text>
-                    <FontAwesome name="exclamation-triangle" size={56} color="#FD003A" style={otpStyles.icons} />
+                    <Icon name="exclamation-triangle" size={56} color="#FD003A" style={otpStyles.icons} />
                 </View>
             )
 

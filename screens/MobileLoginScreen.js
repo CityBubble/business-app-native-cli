@@ -6,6 +6,7 @@ import { TouchableWithoutFeedback } from 'react-native'
 import { Keyboard } from 'react-native'
 import Button from '../components/Button'
 import loginStyles from '../styles/Login'
+import Svg, { Path, Line, G } from 'react-native-svg'
 
 /**
  * Login screen where user is asked to register by mobile number
