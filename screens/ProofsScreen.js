@@ -43,10 +43,10 @@ const ProofsScreen = ({ navigation }) => {
             return (
                 <View style={Proofstyles.buttonContainer}>
                     <TouchableOpacity style={Proofstyles.cardButton} onPress={pickImage}>
-                        <Text style={Proofstyles.cardButtonText}>Upload Logo </Text>
+                        <Text style={Proofstyles.cardButtonText}> Open Gallery </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={Proofstyles.cardButtonCamera} onPress={clickImage}>
-                        <Text style={Proofstyles.cardButtonText}>open camera</Text>
+                        <Text style={Proofstyles.cardButtonText}>Open Camera</Text>
                     </TouchableOpacity>
                 </View>
             )

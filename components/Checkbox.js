@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, Pressable } from 'react-native'
-import { Ionicons } from 'react-native-vector-icons'
+import  Ionicons  from 'react-native-vector-icons/Ionicons'
 import Checkboxstyles from '../styles/componentStyles/Checkbox'
 
 const Checkbox = () => {

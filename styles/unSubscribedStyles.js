@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from "react-native";
+
 
 const styles = StyleSheet.create({
     plansContainer: {
@@ -18,8 +19,6 @@ const styles = StyleSheet.create({
         right: 25,
         color: '#fff'
     },
-
-
     TextPara: {
         color: '#4852ff',
         bottom: 10,
@@ -27,29 +26,39 @@ const styles = StyleSheet.create({
         fontSize: 15,
         right: 20
     },
-    textContainer: {
-        padding: 12,
-        margin: 12,
+    PriceTag: {
+        alignItems: 'center',
+        width: 400,
+        left: 5,
+        padding: 19,
+        height: 100,
+        backgroundColor: '#1C1F29',
+        top: 20
+    },
+    bannerContainer: {
+        backgroundColor: 'transparent',
+        flexDirection: 'row',
+        alignItems: 'center',
+        bottom: 100,
         left: 10
     },
-
-    TextHeadingTwo: {
-        color: '#fff',
-        textAlign: 'center',
-        fontSize: 16
-        ,
-        letterSpacing: 0.39,
-        fontWeight: '500'
+    bannerText: {
+        top: 10,
+        right: 20,
     },
-
-    PriceTag: {
-
-        alignItems: 'center'
-
-
+    bannerHeading: {
+        fontSize: 20,
+        letterSpacing: 0.48,
+        color: '#fff',
+        fontWeight: '800'
+    },
+    bannerParagarph: {
+        fontSize: 16,
+        top: 10,
+        color: '#fff'
     },
     plansInfo: {
-        top: 20,
+        top: 60,
         alignItems: 'center'
     },
     PlansText: {
@@ -62,6 +71,10 @@ const styles = StyleSheet.create({
         width: 132,
         height: 0.5,
         top: 5
+    },
+    PlansCards: {
+
+        margin: 12
     },
     PlansCards: {
         margin: 12
@@ -212,13 +225,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     }
 
+
 })
-
-
-
-
-
-
-
 
 export default styles

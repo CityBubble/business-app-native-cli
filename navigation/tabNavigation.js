@@ -4,7 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DashboardScreen from '../screens/DashboardScreen';
 import PublishScreen from '../screens/PublishScreen'
 import adsHistoryScreen from '../screens/adsHistoryScreen'
-import {Ionicons,FontAwesome} from 'react-native-vector-icons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import  FontAwesome  from 'react-native-vector-icons/FontAwesome';
 import PlansScreen from '../screens/PlansScreen';
 
 
@@ -29,30 +31,30 @@ const Tabnavigator = () => {
 
             <Tab.Screen name="Home" component={DashboardScreen}
                 options={{
-                    // tabBarIcon: ({focused }) => (<Ionicons name="home-outline" size={34} color={focused ? '#4852ff' : '#707070'} />)
+                    tabBarIcon: ({focused }) => (<Ionicons name="home-outline" size={34} color={focused ? '#4852ff' : '#707070'} />)
                 }}
             />
             <Tab.Screen name="Ad history " component={adsHistoryScreen} options={{
-                // tabBarIcon: ({ focused }) => (
-                //     <View style={styles.SvgIcon}>
-                //   <MaterialIcons name="history" size={34} color={focused ? '#4852ff' : '#707070'} />
-                //     </View>
-                // )
+                tabBarIcon: ({ focused }) => (
+                    <View style={styles.SvgIcon}>
+                  <MaterialIcons name="history" size={34} color={focused ? '#4852ff' : '#707070'} />
+                    </View>
+                )
             }} />
             <Tab.Screen name="Plans " component={PlansScreen} options={{
-                // tabBarIcon: ({ focused }) => (
-                //     <View style={styles.SvgIcon}>
-                //         <FontAwesome name="rupee" size={34} color={focused ? '#4852ff' : '#707070'} />
-                //     </View>
-                // )
+                tabBarIcon: ({ focused }) => (
+                    <View style={styles.SvgIcon}>
+                        <FontAwesome name="rupee" size={34} color={focused ? '#4852ff' : '#707070'} />
+                    </View>
+                )
             }} />
             <Tab.Screen name="Publish Ad " component={PublishScreen} options={{
-                // tabBarIcon: ({ focused }) => (
-                //     <View style={styles.SvgIcon}>
+                tabBarIcon: ({ focused }) => (
+                    <View style={styles.SvgIcon}>
 
-                //         <FontAwesome name="bullhorn" size={34} color={focused ? '#4852ff' : '#707070'} />
-                //     </View>
-                // )
+                        <FontAwesome name="bullhorn" size={34} color={focused ? '#4852ff' : '#707070'} />
+                    </View>
+                )
             }} />
         </Tab.Navigator>
     )

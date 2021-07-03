@@ -5,6 +5,7 @@ import ImagePicker from 'react-native-image-crop-picker';
 import AccountInformation from '../components/AccountInformation'
 import AccountList from '../components/AccountList'
 import { TouchableWithoutFeedback } from 'react-native'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import styles from '../styles/Profile'
 const Profile = ({ navigation }) => {
     const [image, setImage] = useState(null);
@@ -25,7 +26,7 @@ const Profile = ({ navigation }) => {
         <View style={styles.containerProfile} >
             <View style={styles.headerContainer}>
 
-                <TouchableOpacity onPress={() => { navigation.navigate('TabNavigator') }} >
+                <TouchableOpacity onPress={() => { navigation.navigate('TabNavigation') }} >
                     <Image source={require('../assets/Image/back.png')} style={styles.HeaderImage} />
                 </TouchableOpacity>
 
@@ -56,7 +57,7 @@ const Profile = ({ navigation }) => {
                         size={99}
                     />
                     <TouchableOpacity style={styles.UploadProfile} onPress={pickImage}>
-                        {/* <FontAwesome name="camera" color="#fff" size={12} /> */}
+                        <FontAwesome name="camera" color="#fff" size={12} />
 
                     </TouchableOpacity>
                 </View>

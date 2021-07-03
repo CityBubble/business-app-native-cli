@@ -54,7 +54,26 @@ const styles = StyleSheet.create({
     },
     plansButton:{
         top:89
+    },
+    btn:{
+        alignItems:'center',
+        top:10,
+        
+    },
+    textBtn:{
+        color:'#CDCDCD'
+    },
+    btnUnderline:{
+        backgroundColor:'#4852ff',
+        width:200,
+        height:2,
+        top:6
+    },
+    iconStyle:{
+        textAlign:'center',
+        top:10
     }
+    
 
 
 })
