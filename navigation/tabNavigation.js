@@ -1,17 +1,42 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image,SafeAreaView , StatusBar } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native'
+
 import DashboardScreen from '../screens/DashboardScreen';
 import PublishScreen from '../screens/PublishScreen'
 import adsHistoryScreen from '../screens/adsHistoryScreen'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import { createStackNavigator } from '@react-navigation/stack';
 import  FontAwesome  from 'react-native-vector-icons/FontAwesome';
 import PlansScreen from '../screens/PlansScreen';
+import Profile from '../screens/ProfileScreen';
+import PlanScreen from '../screens/PlansScreen';
+import GlobalStyles from '../components/GlobalStyles'
+
+
+
 
 
 
 const Tab = createBottomTabNavigator()
+
+
+const DashboardStack = createStackNavigator();
+
+function DashboardStackScreen() {
+  return (
+    <SafeAreaView style={GlobalStyles.droidSafeArea}>
+        <StatusBar style="light" />
+            <DashboardStack.Navigator screenOptions={{ headerShown: false }}>
+                <DashboardStack.Screen name="Home" component={DashboardScreen} />
+                <DashboardStack.Screen name="Plans" component={PlanScreen} />
+            </DashboardStack.Navigator>
+    </SafeAreaView>
+  );
+}
+
 
 const Tabnavigator = () => {
     return (
@@ -29,7 +54,7 @@ const Tabnavigator = () => {
 
         }}>
 
-            <Tab.Screen name="Home" component={DashboardScreen}
+            <Tab.Screen name="Home" component={DashboardStackScreen}
                 options={{
                     tabBarIcon: ({focused }) => (<Ionicons name="home-outline" size={34} color={focused ? '#4852ff' : '#707070'} />)
                 }}

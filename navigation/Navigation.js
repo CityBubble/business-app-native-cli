@@ -42,7 +42,6 @@ export default function Navigation() {
           <Stack.Screen name="underWaitingScreen" component={underWaitingScreen} />
           <Stack.Screen name="waitingScreen" component={waitingScreen} />
           <Stack.Screen name="TabNavigation" component={Tabnavigator} />
-          <Stack.Screen name="ProfileScreen" component={Profile} />
           <Stack.Screen name="Address" component={AddressScreen} />
           <Stack.Screen name="Basic" component={BasicInfoScreen} />
           <Stack.Screen name="Contact" component={ContactScreen} />
