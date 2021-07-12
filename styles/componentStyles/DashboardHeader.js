@@ -26,15 +26,19 @@ const styles = StyleSheet.create({
     },
     addsButton:{
         right:57,
+        bottom:4
     },
     duesButton:{
-        left:57
+        left:57,
+        bottom:4
     },
     textButton:{
         fontSize:18,
         color:'#A5A5A5',
-        fontWeight:'700'
-    }
+        fontWeight:'700',
+        
+    },
+  
 })
 
 export default styles

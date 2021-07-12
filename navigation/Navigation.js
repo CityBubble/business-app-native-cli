@@ -18,10 +18,11 @@ import AddressScreen from '../screens/forms/AddressScreen';
 import BasicInfoScreen from '../screens/forms/BasicInfoScreen';
 import ContactScreen from '../screens/forms/ContactScreen';
 import SocialScreen from '../screens/forms/SocialScreen';
-import ElitePlans from '../screens/elitePlanScreen';
-import BasicPlans from '../screens/basicPlanScreen';
-import PlanScreen from '../screens/PlansScreen';
-import unSubscribedScreen from '../styles/unsubscribedScreen';
+import premiumPlans from '../screens/PlanData/premiumPlans';
+import ElitePlansData from '../screens/PlanData/elitePlans';
+import BasicPlansData from '../screens/PlanData/basicPlans';
+import AddDescriptions from '../screens/AddDescriptions';
+import Descriptions from '../screens/Descriptions';
 
 
 const Stack = createStackNavigator()
@@ -31,7 +32,7 @@ export default function Navigation() {
     <SafeAreaView style={GlobalStyles.droidSafeArea}>
       <StatusBar style="light" />
       <NavigationContainer >
-        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="TabNavigation" >
+        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Tabnavigator}  >
           <Stack.Screen name="Location" component={Location} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Otp" component={Otp} />
@@ -47,10 +48,11 @@ export default function Navigation() {
           <Stack.Screen name="Basic" component={BasicInfoScreen} />
           <Stack.Screen name="Contact" component={ContactScreen} />
           <Stack.Screen name="Social" component={SocialScreen} />
-          <Stack.Screen name="Plans" component={PlanScreen} />
-          <Stack.Screen name="ElitePlans" component={ElitePlans} />
-          <Stack.Screen name="BasicPlans" component={BasicPlans} />
-          <Stack.Screen name="unSubscribe" component={unSubscribedScreen} />
+          <Stack.Screen name="PremiumPlan" component={premiumPlans} />
+          <Stack.Screen name="ElitePlanData" component={ElitePlansData} />
+          <Stack.Screen name="BasicPlanData" component={BasicPlansData} />
+          <Stack.Screen name="AddDescriptions" component={AddDescriptions} />
+          <Stack.Screen name="PlanDescriptions" component={Descriptions} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

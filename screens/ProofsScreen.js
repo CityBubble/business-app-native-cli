@@ -8,7 +8,6 @@ import { Card } from 'react-native-paper'
 import ImagePicker from 'react-native-image-crop-picker';
 import Button from '../components/Button'
 
-
 const ProofsScreen = ({ navigation }) => {
     const [image, setimage] = useState(null)
     const pickImage = () => {

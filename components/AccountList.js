@@ -53,7 +53,7 @@ const AccountList = (props) => {
                             <Text style={styles.listText}>Boss Gym</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.list}>
-                            <Image  source={require('../assets/profile.png')} style={{width:45 ,height:45}}/>
+                            <Image source={require('../assets/profile.png')} style={{ width: 45, height: 45 }} />
                             <Text style={styles.listText}>Add new account</Text>
                         </TouchableOpacity>
                     </View>
@@ -72,8 +72,8 @@ const AccountList = (props) => {
                         <TouchableOpacity onPress={props.close}>
                             <Text style={styles.logoutText}>Dismiss</Text>
                             <View style={styles.underlineLogout}>
-                            <Text style={styles.underlineText}></Text>
-                        </View>
+                                <Text style={styles.underlineText}></Text>
+                            </View>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.footer}>

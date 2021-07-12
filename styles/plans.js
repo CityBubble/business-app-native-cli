@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         top: 18,
-        left: 50
+        left: 35
 
     },
     TextHeading: {

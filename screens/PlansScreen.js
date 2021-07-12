@@ -8,7 +8,7 @@ import PlansInfo from '../components/PlansInfo'
 
 let state = "Under Promotional"
 let plans = "AboutToFinish"
-let key = 1
+let key =1
 const PlanScreen = ({ navigation }) => {
     const Screen = () => {
         switch (key) {
@@ -125,6 +125,7 @@ const PlanScreen = ({ navigation }) => {
                                         TextThird="More customer engagement"
                                         ButtonName="Select plan"
                                         buttonNameStyles={styles.buttonName}
+                                        onPress={()=>{navigation.navigate('ElitePlanData')}}
                                     />
                                 </View>
                                 <View style={styles.PlansCards}>
@@ -139,6 +140,7 @@ const PlanScreen = ({ navigation }) => {
                                         TextThird="More customer engagement"
                                         ButtonName="Select plan"
                                         buttonNameStyles={styles.buttonNameDiamond}
+                                        onPress={()=>{navigation.navigate('PremiumPlan')}}
                                     />
                                 </View>
                                 <View style={styles.PlansCards}>
@@ -153,6 +155,7 @@ const PlanScreen = ({ navigation }) => {
                                         TextThird="More customer engagement"
                                         ButtonName="Select plan"
                                         buttonNameStyles={styles.buttonNameFav}
+                                        onPress={()=>{navigation.navigate('BasicPlanData')}}
                                     />
                                 </View>
                             </View>

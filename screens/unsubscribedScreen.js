@@ -6,7 +6,7 @@ import styles from '../styles/unSubscribedStyles'
 
 state = "Unsubscribed"
 
-const unSubscribedScreen = () => {
+const unSubscribedScreen = ({navigation}) => {
     return (
 
         <View style={styles.plansContainer}>
@@ -61,6 +61,7 @@ const unSubscribedScreen = () => {
                             TextThird="More customer engagement"
                             ButtonName="Select plan"
                             buttonNameStyles={styles.buttonNameDiamond}
+                            onPress={() => navigation.navigate('PremiumPlan')}
                         />
                     </View>
 
@@ -77,7 +78,8 @@ const unSubscribedScreen = () => {
                             TextThird="More customer engagement"
                             ButtonName="Select plan"
                             buttonNameStyles={styles.buttonName}
-                        />
+                            onPress={() => navigation.navigate('ElitePlanData')}
+                            />
                     </View>
 
                     <View style={styles.PlansCards}>
@@ -92,7 +94,8 @@ const unSubscribedScreen = () => {
                             TextThird="More customer engagement"
                             ButtonName="Select plan"
                             buttonNameStyles={styles.buttonNameFav}
-                        />
+                            onPress={() => navigation.navigate('BasicPlanData')}
+                            />
                     </View>
                 </View>
 

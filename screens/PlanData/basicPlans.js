@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'rea
 import PlanInfoCard from '../../components/planInfoCard'
 
 
-const premiumPlans = ({ navigation }) => {
+const BasicPlansData = ({ navigation }) => {
     return (
         <View style={styles.planContainer}>
             <View style={styles.header}>
@@ -11,8 +11,8 @@ const premiumPlans = ({ navigation }) => {
                     <Image source={require('../../assets/Image/back.png')} />
                 </TouchableOpacity>
                 <View style={styles.headerLogo}>
-                    <Image source={require('../../assets/plans/diamond.png')} style={{ width: 35, height: 35, right: 10 }} />
-                    <Text style={styles.headerText}>Premium Plan</Text>
+                    <Image source={require('../../assets/plans/favourites.png')} style={{ width: 35, height: 35, right: 10 }} />
+                    <Text style={styles.headerText}>Basic Plan</Text>
                 </View>
             </View>
             <View style={styles.CardHeader}>
@@ -72,7 +72,7 @@ const premiumPlans = ({ navigation }) => {
     )
 }
 
-export default premiumPlans
+export default BasicPlansData
 
 const styles = StyleSheet.create({
     planContainer: {

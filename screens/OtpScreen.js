@@ -108,7 +108,6 @@ const Otp = ({ route, navigation }) => {
                         value={OtpVal}
                         maxLength={lengthInput}
                         keyboardType="phone-pad"
-
                     />
 
                     <View style={otpStyles.containerInput}>

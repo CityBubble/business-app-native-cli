@@ -10,7 +10,7 @@ const DashboardHeader = (props) => {
 
         <View style={styles.addsButton}>
           <TouchableOpacity onPress={props.add}>
-            <Text style={props.TextButton}>My ads</Text>
+            <Text style={props.TextButton}>Ads</Text>
             <Text style={props.underline}></Text>
           </TouchableOpacity>
         </View>
@@ -27,8 +27,8 @@ const DashboardHeader = (props) => {
         </View>
 
         <View style={styles.duesButton}>
-          <TouchableOpacity onPress={props.due}>
-            <Text style={props.TextButtonTwo}>My dues</Text>
+          <TouchableOpacity onPress={props.dues}>
+            <Text style={props.TextButtonTwo}>Dues</Text>
             <Text style={props.underlineTwo}></Text>
           </TouchableOpacity>
         </View>

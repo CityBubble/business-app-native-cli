@@ -5,10 +5,6 @@ import ModalPicker from '../components/ModalPicker'
 import Button from '../components/Button'
 import locationStyles from '../styles/Location'
 
-
-/**
- * First Screen where location is asked by user
- */
 const LocationScreen = ({ navigation }) => {
 
   const [choosecity, setChooseCity] = useState('Select City .....');
@@ -32,7 +28,6 @@ const LocationScreen = ({ navigation }) => {
       navigation.navigate('Login')
     }
   }
-
 
   return (
     <View style={locationStyles.location}>

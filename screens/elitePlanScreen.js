@@ -125,6 +125,7 @@ const ElitePlans = ({ navigation }) => {
                                         TextThird="More customer engagement"
                                         ButtonName="Select plan"
                                         buttonNameStyles={styles.buttonNameDiamond}
+                                        onPress={()=>navigation.navigate('PremiumPlan')}
                                     />
                                 </View>
 
@@ -141,6 +142,7 @@ const ElitePlans = ({ navigation }) => {
                                         TextThird="More customer engagement"
                                         ButtonName="Select plan"
                                         buttonNameStyles={styles.buttonName}
+                                        onPress={() => navigation.navigate('ElitePlanData')}
                                     />
                                 </View>
 
@@ -156,6 +158,7 @@ const ElitePlans = ({ navigation }) => {
                                         TextThird="More customer engagement"
                                         ButtonName="Select plan"
                                         buttonNameStyles={styles.buttonNameFav}
+                                        onPress={() => navigation.navigate('BasicPlanData')}
                                     />
                                 </View>
                             </View>

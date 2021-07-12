@@ -7,10 +7,12 @@ import AccountList from '../components/AccountList'
 import { TouchableWithoutFeedback } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import styles from '../styles/Profile'
+import ModalProfile from '../components/ModalProfile';
 const Profile = ({ navigation }) => {
     const [image, setImage] = useState(null);
     const [show, setshow] = useState(false)
-   
+    const [Drop, setDrop] = useState(false)
+
     const pickImage = () => {
         ImagePicker.openPicker({
             width: 300,
@@ -26,7 +28,7 @@ const Profile = ({ navigation }) => {
         <View style={styles.containerProfile} >
             <View style={styles.headerContainer}>
 
-                <TouchableOpacity onPress={() => { navigation.navigate('TabNavigation') }} >
+                <TouchableOpacity onPress={() => { navigation.navigate('Home') }} >
                     <Image source={require('../assets/Image/back.png')} style={styles.HeaderImage} />
                 </TouchableOpacity>
 
@@ -34,7 +36,9 @@ const Profile = ({ navigation }) => {
                 <TouchableOpacity style={styles.Hamburger} onPress={() => { setshow(true) }}>
                     <Image source={require('../assets/Form/Hamburger.png')} />
                 </TouchableOpacity>
-
+                <ModalProfile
+                    visible={Drop}
+                />
 
                 <AccountList visible={show}
                     uri={image ? image : 'https://e7.pngegg.com/pngimages/981/645/png-clipart-default-profile-united-states-computer-icons-desktop-free-high-quality-person-icon-miscellaneous-silhouette-thumbnail.png'}
@@ -100,7 +104,7 @@ const Profile = ({ navigation }) => {
                             />
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.infoWrap} onPress={()=>navigation.navigate('Address')}>
+                    <TouchableOpacity style={styles.infoWrap} onPress={() => navigation.navigate('Address')}>
 
                         <View style={styles.accountInformationBox}>
                             <Image source={require('../assets/Form/Address.png')} style={{ width: 18, height: 18 }} />
@@ -109,7 +113,7 @@ const Profile = ({ navigation }) => {
                             />
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.infoWrap} onPress={()=>navigation.navigate('Contact')}>
+                    <TouchableOpacity style={styles.infoWrap} onPress={() => navigation.navigate('Contact')}>
 
                         <View style={styles.accountInformationBox}>
                             <Image source={require('../assets/Form/Phone.png')} style={{ width: 18, height: 18 }} />
@@ -118,7 +122,7 @@ const Profile = ({ navigation }) => {
                             />
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.infoWrap} onPress={()=>{navigation.navigate('Social')}}>
+                    <TouchableOpacity style={styles.infoWrap} onPress={() => { navigation.navigate('Social') }}>
 
                         <View style={styles.accountInformationBox}  >
                             <Image source={require('../assets/Form/Social.png')} style={{ width: 18, height: 18 }} />
