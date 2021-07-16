@@ -5,7 +5,7 @@ import { Avatar } from 'react-native-elements'
 import { TouchableOpacity } from 'react-native'
 import { Image } from 'react-native'
 import styles from '../styles/componentStyles/AccountList'
-
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 const AccountList = (props) => {
     return (
         <Modal transparent visible={props.visible}>
@@ -17,7 +17,7 @@ const AccountList = (props) => {
                             source={{
                                 uri: props.uri
                             }}
-                            size={75}
+                            size={hp('10%')}
                         />
                         <Text style={styles.accountText}>{props.Text}</Text>
                         <View style={styles.underline}>
@@ -30,7 +30,7 @@ const AccountList = (props) => {
                                 rounded
                                 title="T"
                                 containerStyle={styles.account}
-                                size={40}
+                                size={hp('5%')}
                             />
                             <Text style={styles.listText}>Tosib Foods</Text>
                         </TouchableOpacity>
@@ -39,7 +39,7 @@ const AccountList = (props) => {
                                 rounded
                                 title="K"
                                 containerStyle={styles.account}
-                                size={40}
+                                size={hp('5%')}
                             />
                             <Text style={styles.listText}>King's Bakery</Text>
                         </TouchableOpacity>
@@ -48,12 +48,12 @@ const AccountList = (props) => {
                                 rounded
                                 title="B"
                                 containerStyle={styles.account}
-                                size={40}
+                                size={hp('5%')}
                             />
                             <Text style={styles.listText}>Boss Gym</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.list}>
-                            <Image source={require('../assets/profile.png')} style={{ width: 45, height: 45 }} />
+                            <Image source={require('../assets/profile.png')} style={styles.ImageStyles} />
                             <Text style={styles.listText}>Add new account</Text>
                         </TouchableOpacity>
                     </View>

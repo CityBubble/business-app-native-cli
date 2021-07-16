@@ -1,17 +1,17 @@
 import { StyleSheet } from 'react-native'
-
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 const styles = StyleSheet.create({
     informationContainer: {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        paddingHorizontal: 15,
+        paddingHorizontal: hp('2%'),
         justifyContent: 'space-between'
     },
 
     informationText: {
         color: '#fff',
-        fontSize: 17,
+        fontSize: hp('2.5'),
     }
 })
 

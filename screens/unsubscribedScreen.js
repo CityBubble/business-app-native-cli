@@ -4,7 +4,7 @@ import Svg, { Path, G } from 'react-native-svg'
 import PlansInfo from '../components/PlansInfo'
 import styles from '../styles/unSubscribedStyles'
 
-state = "Unsubscribed"
+let states = "Unsubscribed"
 
 const unSubscribedScreen = ({navigation}) => {
     return (
@@ -28,7 +28,7 @@ const unSubscribedScreen = ({navigation}) => {
                     </G>
                 </Svg>
                 <Text style={styles.TextHeading}>You are currently</Text>
-                <Text style={styles.TextPara}>{state}</Text>
+                <Text style={styles.TextPara}>{states}</Text>
             </View>
 
             <ScrollView
@@ -55,6 +55,8 @@ const unSubscribedScreen = ({navigation}) => {
                             Image={require('../assets/plans/diamond.png')}
                             PlanName="Premium"
                             Underline={styles.PlanUnderlineDiamond}
+                            ImageStyle={styles.imgPlanDiamond}
+                            price={styles.premiumStyle}
                             iconColor='#FF7100'
                             TextFirst="6 ads a month"
                             TextSecond="Ranks on top of other ads"
@@ -72,6 +74,7 @@ const unSubscribedScreen = ({navigation}) => {
                             ImageStyle={{ width: 89, height: 59 }}
                             PlanName="Elite"
                             Underline={styles.PlanUnderline}
+                            ImageStyle={styles.imgPlanElite}
                             iconColor='#6324D2'
                             TextFirst="6 ads a month"
                             TextSecond="Ranks on top of other ads"
@@ -88,6 +91,7 @@ const unSubscribedScreen = ({navigation}) => {
                             Image={require('../assets/plans/favourites.png')}
                             PlanName="Basic"
                             Underline={styles.PlanUnderlineFav}
+                            ImageStyle={styles.imgPlanFav}
                             iconColor='#FFC228'
                             TextFirst="6 ads a month"
                             TextSecond="Ranks on top of other ads"

@@ -8,8 +8,6 @@ import Login from '../screens/MobileLoginScreen'
 import Location from '../screens/LocationScreen'
 import Register from '../screens/RegisterScreen'
 import Proofs from '../screens/ProofsScreen'
-import UnderReviewScreen from '../screens/waitingScreen/underReviewScreen';
-import underWaitingScreen from '../screens/waitingScreen/underWaitingScreen';
 import waitingScreen from '../screens/waitingScreen';
 import GlobalStyles from '../components/GlobalStyles'
 import Tabnavigator from './tabNavigation';
@@ -39,8 +37,6 @@ export default function Navigation() {
           <Stack.Screen name="RegisterScreen" component={Register} />
           <Stack.Screen name="AddressScreen" component={RegisterAddress} />
           <Stack.Screen name="ProofScreen" component={Proofs} />
-          <Stack.Screen name="underReviewScreen" component={UnderReviewScreen} />
-          <Stack.Screen name="underWaitingScreen" component={underWaitingScreen} />
           <Stack.Screen name="waitingScreen" component={waitingScreen} />
           <Stack.Screen name="TabNavigation" component={Tabnavigator} />
           <Stack.Screen name="ProfileScreen" component={Profile} />

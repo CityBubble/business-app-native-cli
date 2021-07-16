@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-
+import styles from '../styles/componentStyles/PlanInfoStyle'
 
 const PlansInfo = (props) => {
     return (
@@ -39,52 +39,3 @@ const PlansInfo = (props) => {
 
 export default PlansInfo
 
-const styles = StyleSheet.create({
-
-
-    ImageContainer: {
-        alignItems: 'center',
-    },
-
-
-    TextPlans: {
-        top: 30,
-        // alignItems:'center'
-        left: 16
-    },
-    Heading: {
-        color: '#fff',
-        marginVertical: 10,
-        fontSize: 20,
-        fontWeight: '600'
-    },
-    info: {
-
-        flexDirection: 'row',
-        alignItems: 'center',
-        right: 20
-
-    },
-    TextInfo: {
-        color: '#fff',
-        left: 10,
-        textAlign: 'left'
-    },
-
-    ButtonText: {
-        color: '#fff',
-        fontWeight: '700',
-        right: 10
-
-    },
-    Button: {
-        padding: 12
-    },
-    arrow: {
-        left: 10
-    }
-
-
-
-
-})

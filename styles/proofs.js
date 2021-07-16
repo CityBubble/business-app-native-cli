@@ -1,7 +1,5 @@
 import {StyleSheet} from 'react-native'
-
-
-
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
 const Proofstyles = StyleSheet.create({
     proofsContainer: {
@@ -12,33 +10,25 @@ const Proofstyles = StyleSheet.create({
     cardsUploads: {
       backgroundColor: 'transparent',
       borderRadius: 12,
-      width: 261,
-      height: 114,
+      width: wp('70%'),
+      height: hp('17.2%'),
       alignItems: 'center',
-  
-  
-    }
-  
-    ,
-  
+  }  ,
     inputContainerLogo: {
       alignItems: 'center',
-      top: 35,
+      top: hp('7%'),
       borderWidth: 1,
       borderColor: '#fff',
       borderRadius: 19,
       borderStyle: 'dotted'
-  
-    },
+  },
     proofsContainerInput: {
-  
       alignItems: 'center',
-  
     },
     cardText: {
       color: '#fff',
-      left: 12,
-      fontSize: 17
+      left: wp('1%'),
+      fontSize: hp('2.3%')
   
     },
     cardButtonText: {
@@ -49,25 +39,25 @@ const Proofstyles = StyleSheet.create({
       borderWidth: 1,
       borderColor: '#424CEB',
       borderRadius: 6,
-      width: 90,
-      padding: 6,
-      left: 15
+      width: wp('23%'),
+      padding: wp('2%'),
+      left: wp('3%')
     },
     cardButton: {
       borderWidth: 1,
       borderColor: '#424CEB',
       borderRadius: 6,
-      width: 100,
-      padding: 6,
+      width: wp('30%'),
+      padding: wp('2.5%'),
   
     },
     cardButtonCamera: {
       borderWidth: 1,
       borderColor: '#424CEB',
       borderRadius: 6,
-      width: 100,
-      padding: 6,
-      left:10
+      width: wp('30%'),
+      padding: wp('2.5%'),
+      left:wp('3%')
   
     },
     buttonText: {
@@ -77,35 +67,33 @@ const Proofstyles = StyleSheet.create({
     contentCard: {
       flexDirection: 'row',
       alignItems: 'center',
-      top: 10
+      top: hp('.5%')
     }
     , imageUpload: {
-      width: 330,
-      height: 180,
+      width: wp('80%'),
+      height: hp('27.5%'),
       borderTopLeftRadius: 12,
       borderTopRightRadius: 12
     },
     buttonContainer: {
       flexDirection: 'row',
-      top: 12,
+      top: hp('1.8%'),
       
     },
     button: {
-      top: 90
+      top: hp('10%')
     },
     checkboxContainer: {
       flexDirection: 'row',
-      marginTop: 40,
-      right:10,
-      
-  
+      marginTop: hp('4%'),
+      right:wp('2%'),
   }
   ,
   checkboxLabel: {
       color: '#BFBFBF',
-      width: 264,
+      width: wp('75.5%'),
       textAlign: 'left',
-      fontSize: 14,
+      fontSize: wp('3.9%'),
   
   }
   

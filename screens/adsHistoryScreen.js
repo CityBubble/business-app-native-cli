@@ -13,9 +13,9 @@ const adsHistoryScreen = ({navigation}) => {
        <TouchableOpacity onPress={()=>navigation.navigate('AddDescriptions')}>
 
        <History
-       Date="21 oct 2021"
-       Launched="21 oct 2021"
-       Expired="21 nov 2021"
+       Date="21 Oct, 2021"
+       Launched="21 Oct, 2021"
+       Expired="21 Nov, 2021"
        ticket="300"
        Views="1000 views"
        Image={require('../assets/ads/mixVeg.jpg')}
@@ -26,9 +26,9 @@ const adsHistoryScreen = ({navigation}) => {
        <TouchableOpacity onPress={()=>navigation.navigate('AddDescriptions')}>
 
        <History
-       Date="29 oct 2021"
-       Launched="29 oct 2021"
-       Expired="29 nov 2021"
+       Date="29 Oct, 2021"
+       Launched="29 Oct, 2021"
+       Expired="29 Nov, 2021"
        ticket="800"
        Views="1200 views"
        Image={require('../assets/ads/beetRoot.jpg')}
@@ -39,9 +39,9 @@ const adsHistoryScreen = ({navigation}) => {
        <TouchableOpacity onPress={()=>navigation.navigate('AddDescriptions')}>
 
        <History
-       Date="21 Dec 2021"
-       Launched="21 Dec 2021"
-       Expired="21 jan 2022"
+       Date="21 Dec, 2021"
+       Launched="21 Dec, 2021"
+       Expired="21 Jan, 2022"
        ticket="300"
        Views="1090 views"
        Image={require('../assets/ads/carrot.jpg')}

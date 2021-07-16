@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'
 const styles = StyleSheet.create({
     modalPickerContainer:{
         flex:1,
@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
         alignItems:'flex-start'
     },
     text:{
-        margin:20,
-        fontSize:20,
+        margin:hp('2%'),
+        fontSize:hp('2.5%'),
         fontWeight:'bold'
     }    
 })

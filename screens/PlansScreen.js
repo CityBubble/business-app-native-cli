@@ -8,7 +8,7 @@ import PlansInfo from '../components/PlansInfo'
 
 let state = "Under Promotional"
 let plans = "AboutToFinish"
-let key =1
+key=1
 const PlanScreen = ({ navigation }) => {
     const Screen = () => {
         switch (key) {
@@ -116,7 +116,7 @@ const PlanScreen = ({ navigation }) => {
                                     <PlansInfo
                                         styleBox={styles.boxElite}
                                         Image={require('../assets/plans/Crown.png')}
-                                        ImageStyle={{ width: 89, height: 59 }}
+                                        ImageStyle={styles.imgPlanElite}
                                         PlanName="Elite"
                                         Underline={styles.PlanUnderline}
                                         iconColor='#6324D2'
@@ -132,6 +132,7 @@ const PlanScreen = ({ navigation }) => {
                                     <PlansInfo
                                         styleBox={styles.boxEliteDiamond}
                                         Image={require('../assets/plans/diamond.png')}
+                                        ImageStyle={styles.imgPlanDiamond}
                                         PlanName="Premium"
                                         Underline={styles.PlanUnderlineDiamond}
                                         iconColor='#FF7100'
@@ -147,6 +148,7 @@ const PlanScreen = ({ navigation }) => {
                                     <PlansInfo
                                         styleBox={styles.boxEliteFav}
                                         Image={require('../assets/plans/favourites.png')}
+                                        ImageStyle={styles.imgPlanFav}
                                         PlanName="Basic"
                                         Underline={styles.PlanUnderlineFav}
                                         iconColor='#FFC228'

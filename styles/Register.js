@@ -1,6 +1,8 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
+
 const Registerstyles = StyleSheet.create({
-    registerScreen: {
+     registerScreen: {
         flex: 1,
         backgroundColor: '#14161D'
 
@@ -11,59 +13,55 @@ const Registerstyles = StyleSheet.create({
     ,
     registerText: {
         color: '#fff',
-        fontSize: 27,
-        padding: 10,
-        fontWeight: '700'
+        fontSize: Platform.OS === 'ios' ? hp('3%') : hp('4.1%'),
+        padding: hp('1.3%'),
+        fontWeight: '700',
     }
-    ,
+   ,
     registerTextSecondary: {
         color: '#A5A5A5',
-        paddingLeft: 10,
-        fontSize: 16
+        paddingLeft: wp('2.2%'),
+        fontSize: wp('5%')
     },
     inputContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 22,
-
-
+        marginTop: hp('1.5%'),
     },
     inputContainerSecondary: {
         justifyContent: 'center',
-
-        marginTop: 25
+        marginTop: hp('4.2%')
     }
     ,
     Cards: {
         backgroundColor: '#000',
         borderRadius: 12,
-
-    },
+ },
     registerTextContainer: {
-        marginTop: 10,
-        padding: 12
+        marginTop: hp('0.2%'),
+        padding: wp('1%')
     },
     registerLabel: {
-        left: 19,
-        marginBottom: 10,
+        left: wp('2.9%'),
+        marginBottom: hp('1.3%'),
         color: '#fff',
-        fontSize: 16,
+        fontSize: wp('4%'),
         letterSpacing: 0.5,
         fontWeight: '600',
     },
     registerTextImage: {
         flexDirection: 'row',
         alignItems: 'center',
-        left: 10
+        left: wp('2%')
     },
 
 
     registerLogo: {
-        alignItems: 'center'
+        alignItems: 'center',
     },
     Icon: {
-        width: 25,
-        height: 25
+        width:Platform.OS==='ios'?wp('6.9%'):wp('7.4%'),
+        height: Platform.OS === 'ios' ? hp('3.4%') : hp('4.2%'),
     }
 
 

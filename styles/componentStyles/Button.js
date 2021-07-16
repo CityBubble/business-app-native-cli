@@ -1,18 +1,18 @@
 import {StyleSheet} from 'react-native'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'
 const styles = StyleSheet.create({
     registerBtn: {
-        padding: 12,
-        marginTop: 50,
-        width: 300,
-        marginHorizontal: 100,
+        padding: hp('1.5%'),
+        marginTop: hp('4%'),
+        width: wp('60%'),
         alignItems: 'center',
         borderRadius: 12,
         backgroundColor: '#4852FF'
     },
     registerBtnText: {
         color: '#fff',
-        fontSize: 18,
-        fontWeight:'800'
+        fontSize: hp('2.5%'),
+        fontWeight:'700'
     }
 })
 

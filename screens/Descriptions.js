@@ -2,7 +2,7 @@ import React from 'react'
 import { ScrollView } from 'react-native'
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import DiscriptionCard from '../components/adsComponent/discriptionCard'
-
+import styles from '../styles/DiscriptionStyles'
 const Descriptions = ({ navigation }) => {
     return (
         <View style={styles.DescriptionsContainer}>
@@ -35,42 +35,3 @@ const Descriptions = ({ navigation }) => {
 }
 
 export default Descriptions
-
-const styles = StyleSheet.create({
-    DescriptionsContainer: {
-        flex: 1,
-        backgroundColor: '#14161d'
-    },
-    Background: {
-        backgroundColor: '#ECC710',
-        height: 206
-    },
-    offer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        left: 94,
-    },
-    BackIcon: {
-        width: 35,
-        padding: 6,
-        backgroundColor: '#fff',
-        borderRadius: 50,
-        left: 16,
-        top: 10
-    },
-    textWhite: {
-        color: '#fff',
-        fontSize: 36,
-        fontWeight: 'bold'
-    },
-    textGreen: {
-        color: '#0BB739',
-        fontSize: 46,
-        fontWeight: 'bold'
-    },
-    DiscriptionCard: {
-        bottom: 29,
-        alignItems: 'center'
-    },
-
-})

@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, Image, Button } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { TouchableOpacity } from 'react-native'
-
+import styles from '../styles/componentStyles/SubscriptionTagstyles'
 
 
 const SubscriptionTag = (props) => {
@@ -37,7 +37,7 @@ const SubscriptionTag = (props) => {
                     </View>
                     <View style={styles.detailAds}>
                         <Text style={styles.InfoText}>Ads left</Text>
-                        <Text style={styles.InfoDetailTwo} >{props.AdsLeft}</Text>
+                        <Text style={styles.InfoDetail} >{props.AdsLeft}</Text>
                     </View>
                     <View style={styles.Button}>
 
@@ -56,115 +56,3 @@ const SubscriptionTag = (props) => {
 
 export default SubscriptionTag
 
-const styles = StyleSheet.create({
-
-
-    insideBlock: {
-        backgroundColor: '#363841',
-        width: 339,
-        alignItems: 'center',
-        height: 258,
-        borderRadius: 12,
-        justifyContent: 'space-evenly'
-    },
-    TextName: {
-        color: '#fff',
-        fontSize: 18,
-        left: 7
-    },
-    Heading: {
-        flexDirection: 'row',
-        padding: 12,
-        alignItems: 'center'
-    },
-
-    priceFix: {
-        flexDirection: 'row',
-        top: 10
-    },
-    TextPrice: {
-        color: '#fff',
-        fontWeight: '800',
-        fontSize: 41,
-        left: 2
-    },
-    RuppeeIcon: {
-        top: 15,
-        fontWeight: '800'
-    },
-    TextMonth: {
-        color: '#fff',
-        fontSize: 18,
-        fontWeight: '600',
-        top: 10
-    }
-    , detailAds: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-    },
-    InfoText: {
-        right: 50,
-        fontSize: 15,
-        letterSpacing: 0.36,
-        color: '#B4B4B4'
-    },
-    InfoDetail: {
-        textAlign: 'left',
-        left: 50,
-        fontSize: 15,
-        color: '#fff',
-        fontWeight: '600'
-    },
-    AddDetail: {
-        padding: 15
-    },
-    plans: {
-        alignItems: 'center',
-        borderRadius: 200 / 2,
-        width: 111,
-        left: 119,
-        top: 40,
-        backgroundColor: '#363841',
-        borderColor: '#fff',
-        height: 80,
-
-
-
-    },
-    PlansText: {
-        top: 10,
-        fontSize: 15,
-        color: '#fff',
-        fontWeight: '700'
-    },
-    InfoDetailTwo: {
-        right: 75,
-        color: '#fff',
-        fontWeight: '600'
-    },
-    buttonName: {
-        backgroundColor: '#FD8B3C',
-        alignItems: 'center',
-        padding: 8,
-        top: 10,
-        borderRadius: 5,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        width: 150,
-        left: 20
-    },
-    ButtonText: {
-        color: '#fff',
-        fontWeight: '700',
-        right: 10
-
-    },
-    Button: {
-        padding: 12
-    }
-
-
-
-
-})

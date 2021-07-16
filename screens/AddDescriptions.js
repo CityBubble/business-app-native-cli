@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, Dimensions, ScrollView, TouchableOpacity
 import DiscriptionCard from '../components/adsComponent/discriptionCard'
 import StopModal from '../components/warning/StopModal'
 import RenewModal from '../components/warning/RenewModal'
+import styles from '../styles/AddDescriptionStyle'
 
 const AddDescriptions = ({ navigation }) => {
     const [show, setShow] = useState(false)
@@ -12,7 +13,7 @@ const AddDescriptions = ({ navigation }) => {
             <ScrollView>
 
                 <View style={styles.BannerImage}>
-                    <Image source={require('../assets/plans/veg.jpg')} style={{ height: 290, width: 398, resizeMode: 'cover' }} />
+                    <Image source={require('../assets/plans/veg.jpg')} style={styles.image} />
                 </View>
                 <View style={styles.headerStyle}>
                     <TouchableOpacity onPress={() => navigation.navigate('Home')}>
@@ -62,83 +63,3 @@ const AddDescriptions = ({ navigation }) => {
 
 export default AddDescriptions
 
-const styles = StyleSheet.create({
-    DescriptionContainer: {
-        flex: 1,
-        backgroundColor: '#14161d'
-    },
-    headerStyle: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        bottom: 330,
-        backgroundColor: 'rgba(0,0,0,0.4)',
-        height: 340
-    },
-    offer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        left: 74,
-        bottom: 82
-
-    },
-    BackIcon: {
-        left: 10,
-        padding: 6,
-        backgroundColor: '#fff',
-        borderRadius: 50,
-        bottom: 92
-    },
-    textWhite: {
-        color: '#fff',
-        fontSize: 36,
-        fontWeight: 'bold'
-    },
-    textGreen: {
-        color: '#0BB739',
-        fontSize: 46,
-        fontWeight: 'bold'
-    },
-    DiscriptionCard: {
-        bottom: 409,
-        alignItems: 'center'
-    },
-    ButtonContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        borderTopWidth: 1,
-        borderTopColor: '#A5A5A5',
-        backgroundColor: '#4852ff',
-        height: 60,
-
-    },
-    StopBtn: {
-        alignItems: 'center',
-        padding: 12,
-        borderLeftWidth: 1,
-        borderLeftColor: '#A5A5A5',
-        width: 190,
-    },
-    refreshBtn: {
-        alignItems: 'center',
-        width: 190,
-        padding: 12,
-
-    },
-    stopText: {
-        fontSize: 20,
-        padding: 12,
-        color: '#fff',
-        fontWeight: '700',
-        bottom: 10
-
-    },
-    refreshText: {
-        fontSize: 20,
-        padding: 12,
-        color: '#fff',
-        fontWeight: '700',
-        bottom: 10
-
-    }
-}
-)

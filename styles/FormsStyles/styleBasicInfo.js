@@ -1,62 +1,56 @@
-import react from 'react'
 import { StyleSheet } from 'react-native'
-
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
 const styles = StyleSheet.create({
     Container: {
         flex: 1,
         backgroundColor: '#14161d'
     },
-
-
     Header: {
         flexDirection: 'row',
         alignItems: 'center',
-        top: 20
+        top: hp('2%')
 
     },
     headerImage: {
-        left: 20,
-
-    }
-    ,
+        left: wp('4%'),
+    },
     headerText: {
         color: '#fff',
-        fontSize: 20,
-        left: 128,
+        fontSize: hp('2.5%'),
+        left: wp('35%'),
         fontWeight: '700',
         letterSpacing: 0.8
-    }
-    ,
-
+    },
     textContainer: {
-        top: 132,
-        left: 32,
+        top: hp('15%'),
+        left: wp('7%'),
 
     },
-textContainerTwo:{
-    top: 176,
-    left: 32,
-},
+    textContainerTwo: {
+        top: hp('22%'),
+        left: wp('7%'),
+    },
 
     Cards: {
         backgroundColor: '#000',
         borderRadius: 18,
-        width: 311,
-        top: 10,
-        height:52
+        width: wp('80%'),
+        height: hp('7%'),
+
     },
     textHeading: {
         color: '#fff',
         fontWeight: '600',
         letterSpacing: 0.24,
-        fontSize: 15,
-        left:10,
-        bottom:5
+        bottom: hp('2%'),
+        fontSize: hp('2%'),
+        left: wp('8%'),
+
     },
-    textBox:{
-        justifyContent:'center',
-        bottom:45
+    textBox: {
+        justifyContent: 'center',
+        bottom: hp('4%')
     }
 })
 

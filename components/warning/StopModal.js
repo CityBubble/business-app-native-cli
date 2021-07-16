@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View,Modal,Image,TouchableOpacity } from 'react-native'
-
+import styles from '../../styles/alert/stopStyle'
 const StopModal = (props) => {
    
     return (
@@ -30,71 +30,3 @@ const StopModal = (props) => {
 
 export default StopModal
 
-const styles = StyleSheet.create({
-stopModalBackground:{
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    justifyContent: 'center',
-    alignItems: 'center'
-},
-stopModalAlert:{
-    width: 310,
-    height: 240,
-    backgroundColor: '#262626',
-    paddingHorizontal: 5,
-    paddingVertical: 10,
-    borderRadius: 20,
-    elevation: 20
-},
-stopModalText:{
-    top:20,
-    alignItems:'center'
-},
- stopModalButton:{
-     top:20,
-     flexDirection:'row',
-     justifyContent:'space-around',
-     padding:15
- },
- btnNo:{
-     backgroundColor:'#EC8B40',
-     padding:12,
-     width:90,
-     height:43,
-     alignItems:'center',
-     borderRadius:12
- },
- btnYes:{
-     backgroundColor:'transparent',
-     padding:12,
-     width:90,
-     height:43,
-     alignItems:'center',
-     borderRadius:12,
-     borderWidth:1,
-     borderColor:'#fff'
- },
- stopBtnNo:{
-     color:'#fff',
-     fontSize:18,
-     bottom:1,
-     fontWeight:'700'
-},
- stopBtnYes:{
-     color:'#fff',
-     fontSize:18,
-     bottom:1
-},
-stopModalHeading:{
-    fontSize:20,
-    color:'#fff',
-    fontWeight:'800'
-},
-stopModalPara:{
-    fontSize:17,
-    color:'#fff',
-    textAlign:'center',
-    padding:12
-}
-
-})

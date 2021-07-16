@@ -6,6 +6,7 @@ import { TouchableWithoutFeedback } from 'react-native'
 import { Keyboard } from 'react-native'
 import Button from '../components/Button'
 import loginStyles from '../styles/Login'
+import styles from '../styles/componentStyles/Button'
 
 /**
  * Login screen where user is asked to register by mobile number
@@ -49,6 +50,7 @@ const MobileLoginScreen = ({ navigation }) => {
                         withdarkTheme
                         withShadow
                         autofocus
+                       
                     />
                     <Button title="Next" onPress={onPressButton} />
                 </View>

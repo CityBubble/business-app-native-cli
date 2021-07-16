@@ -40,7 +40,7 @@ const Otp = ({ route, navigation }) => {
             return (
                 <View>
                     <Text style={otpStyles.otpHeading}>Enter the OTP</Text>
-                    <View>
+                    <View style={otpStyles.textStyles}>
                         <Text style={otpStyles.otpText}>{`Please check for the OTP received on your number `}</Text>
                         <Text style={otpStyles.textNumber}>{number}</Text>
                     </View>
@@ -51,7 +51,7 @@ const Otp = ({ route, navigation }) => {
         else {
             return (
                 <View >
-                    <Text style={otpStyles.otpHeading}>Oops !! It's an invalid OTP!</Text>
+                    <Text style={otpStyles.otpHeadingError}>Oops !! It's an invalid OTP!</Text>
                     <Icon name="exclamation-triangle" size={56} color="#FD003A" style={otpStyles.icons} />
                 </View>
             )
@@ -95,9 +95,7 @@ const Otp = ({ route, navigation }) => {
 
     return (
         <View style={otpStyles.container}>
-            <TouchableOpacity style={otpStyles.otpBack} onPress={() => { navigation.navigate('Login') }} >
-                <Image source={require('../assets/Image/back.png')} />
-            </TouchableOpacity>
+  
             <KeyboardAvoidingView keyboardVerticalOffset={50} behavior={'padding'} style={otpStyles.otpStyle}>
                 {TextCondition()}
                 <View style={otpStyles.textInput}>

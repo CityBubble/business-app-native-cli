@@ -1,37 +1,44 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet,Dimensions,Platform } from 'react-native'
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
-
-const styles = StyleSheet.create({
+const otpstyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#14161D'
     },
     otpStyle: {
         flex: 1,
-        padding: 10
+        padding: wp('1%')
     },
     otpHeading: {
         color: '#fff',
-        marginTop: 50,
-        marginHorizontal: 30,
-        fontSize: 27,
+        marginTop: hp('6%'),
+        marginHorizontal:Platform.OS==='ios'?wp('6%'):wp('7.2%'),
+        fontSize: Platform.OS==='ios'?hp('3.2%'):hp('3.2%'),
+        fontWeight: '700'
+    },
+    otpHeadingError: {
+        color: '#fff',
+        marginTop: hp('6%'),
+        marginHorizontal:Platform.OS==='ios'?wp('6%'):wp('14.4%'),
+        fontSize: Platform.OS==='ios'?hp('3.2%'):hp('3.2%'),
         fontWeight: '700'
     },
     otpText: {
-        marginTop: 10,
-        marginHorizontal: 17,
+        marginTop: hp('1.4%'),
+        marginHorizontal: wp('3.6%'),
         color: '#ADADAD',
-        fontSize: 16,
+        fontSize: hp('2.2%'),
         letterSpacing: 1
     },
     containerInput: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 80
+        marginTop: hp('5%')
     },
     cellView: {
-        paddingVertical: 13,
+        paddingVertical: wp('3%'),
         width: 45,
         height: 53,
         margin: 5,
@@ -54,37 +61,31 @@ const styles = StyleSheet.create({
     },
     cellText: {
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: hp('2%'),
         color: '#fff'
     },
     OtpTextChange: {
         color: '#fff',
         textAlign: 'center',
-        padding: 12,
-        marginTop: 10,
-        fontSize: 14
+        padding: wp('2%'),
+        marginTop: hp('1%'),
+        fontSize: hp('2%')
     },
-    otpBack: {
-        marginLeft: 40,
-        top: 20
-    },
+ 
     textNumber: {
         color: '#4852ff',
-        left: 118,
-        padding: 12,
-        fontSize: 15,
-        bottom: 30
-    },  
-    otpHeading: {
-        color: '#fff',
-        marginTop: 50,
-        marginHorizontal: 15,
-        fontSize: 27,
-        fontWeight:'700'
+        left: Platform.OS==='ios'?wp('32%'):wp('18%'),
+        padding: wp('3.1%'),
+        fontSize: hp('2.2%'),
+        bottom: hp('4.1%')
     },
-    icons:{
-        left:155,
-        top:46
+   
+    icons: {
+        left: wp('42%'),
+        top: hp('2%')
+    },
+    textStyles:{
+        left:wp('3.6%')
     }
 
 
@@ -93,4 +94,4 @@ const styles = StyleSheet.create({
 
 
 
-export default styles
+export default otpstyles

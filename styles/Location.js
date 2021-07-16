@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'
 
 const styles = StyleSheet.create({
   location: {
@@ -7,8 +8,8 @@ const styles = StyleSheet.create({
     flex: 1
   }, 
   locationContainer: {
-    marginTop: 80,
-    width:'100%',
+    marginTop: hp('10%'),
+    width:wp('70%'),
     alignItems:'center' 
   },
   locationText:{
@@ -16,34 +17,30 @@ const styles = StyleSheet.create({
     alignItems:'center',  
   },  
   locationImage: {
-    width: 200,
-    height: 200,  
+    width: wp('50%'),
+    height: hp('25%'),  
   },
   locationDropdownContainer: {
-    marginTop: 100,
-      // marginRight: 120
+    marginTop: hp('10%'),
+      
   },
   locationTouchable: {
     backgroundColor: '#000',
-    width: 300,
-    height: 55,
+    width: wp('80%'),
+    height: hp('7%'),
     borderRadius: 15,
     alignItems: 'center',
     flexDirection: 'row',
-    paddingHorizontal: 20,
+    paddingHorizontal: wp('5%'),
     alignSelf: 'stretch',
-    marginTop: 15
+    marginTop: hp('2%')
   }, 
   dropdownText: {
     color:'#fff',
     padding:10,
     fontSize: 16
   },
-  locationBtn: {
-    padding: 12,
-    marginTop: 67,
-    width: 200,
-  },  
+  
   locationAccess:{
     color: '#fff',
     textAlign: 'center',
@@ -54,7 +51,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight:'800', 
     fontSize: 14,
-    marginLeft: 10 
+    marginLeft: wp('2%') 
   },
   locationCity:{
     marginLeft:6,

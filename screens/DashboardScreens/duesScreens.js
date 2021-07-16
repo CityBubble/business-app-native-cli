@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'rea
 import DashboardHeader from '../../components/DashboardHeader'
 import DuesComponents from '../../components/DuesComponents'
 import OverallDues from '../../components/OverallDues'
+import styles from '../../styles/dashboardScreen/duesScreen'
 const duesScreens = ({ navigation }) => {
     const [change, setChange] = useState(false)
     const [Dues, setDues] = useState(true)
@@ -45,7 +46,7 @@ const duesScreens = ({ navigation }) => {
                 return (
 
                     <DuesComponents
-                        date="16 October -16 November,2021"
+                        date="16 Oct -16 Nov,2021"
                         addGenrated="02"
                         Coupons='15'
                         dues="1500"
@@ -101,7 +102,7 @@ const duesScreens = ({ navigation }) => {
                 return (
 
                     <DuesComponents
-                        date="16 October -16 November,2021"
+                        date="16 Oct -16 Nov,2021"
                         addGenrated="02"
                         Coupons='15'
                         dues="1500"
@@ -119,7 +120,7 @@ const duesScreens = ({ navigation }) => {
                 return (
 
                     <DuesComponents
-                        date="16 October -16 November,2021"
+                        date="16 Oct -16 Nov,2021"
                         addGenrated="01"
                         Coupons='20'
                         dues="2000"
@@ -132,7 +133,7 @@ const duesScreens = ({ navigation }) => {
         else if (Overall) {
             return (
                 <OverallDues
-                    date="16 October -30 December ,2021"
+                    date="16 Oct -30 Dec ,2021"
                     genrated="30"
                 />
             )
@@ -191,66 +192,3 @@ const duesScreens = ({ navigation }) => {
 
 export default duesScreens
 
-const styles = StyleSheet.create({
-
-    duesContainer: {
-        flex: 1,
-        backgroundColor: '#14161d'
-    },
-    dueTab: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        top: 59,
-        justifyContent: 'space-evenly'
-    },
-    dueText: {
-        color: '#fff',
-        fontWeight: '800'
-    },
-    cardContainer: {
-        top: 100
-    },
-    btnStyles: {
-        top: 15,
-        backgroundColor: '#4852ff',
-        padding: 12,
-        width: 195,
-        alignItems: 'center',
-        borderRadius: 15
-    },
-    DueContainer: {
-        backgroundColor: '#292930',
-        padding: 12,
-        alignItems: 'center',
-        height: 382,
-        width: 370,
-        left: 8,
-        borderRadius: 12
-    },
-    DueSmallConatiner: {
-        backgroundColor: '#292930',
-        padding: 12,
-        alignItems: 'center',
-        height: 238,
-        width: 370,
-        left: 8,
-        borderRadius: 12
-    },
-    HeadingDue: {
-        color: '#fff',
-        textAlign: 'center',
-        bottom: 30,
-        fontSize: 18
-    },
-    dueSetup: {
-        top: 30,
-
-    },
-    dueCard: {
-        flexDirection: 'row',
-        marginTop: 35,
-        bottom: 28
-    },
-
-
-})
