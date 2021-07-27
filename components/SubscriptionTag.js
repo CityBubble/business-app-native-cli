@@ -20,7 +20,6 @@ const SubscriptionTag = (props) => {
                 </View>
                 <View style={props.price}>
                     <View style={styles.priceFix}>
-
                         <FontAwesome name="rupee" size={24} color="#fff" style={styles.RuppeeIcon} />
                         <Text style={styles.TextPrice}>{props.planPrice}</Text>
                     </View>
@@ -29,25 +28,24 @@ const SubscriptionTag = (props) => {
                 <View style={styles.AddDetail}>
                     <View style={styles.detailAds}>
                         <Text style={styles.InfoText}>Started on</Text>
-                        <Text style={styles.InfoDetail} >{props.Starting}</Text>
-                    </View>
-                    <View style={styles.detailAds}>
                         <Text style={styles.InfoText}>Valid  till</Text>
-                        <Text style={styles.InfoDetail} >{props.Ending}</Text>
-                    </View>
-                    <View style={styles.detailAds}>
                         <Text style={styles.InfoText}>Ads left</Text>
+                    </View>
+                    <View style={styles.detailDescrip}>
+                        <Text style={styles.InfoDetail} >{props.Starting}</Text>
+                        <Text style={styles.InfoDetail} >{props.Ending}</Text>
                         <Text style={styles.InfoDetail} >{props.AdsLeft}</Text>
                     </View>
+                  
+                </View>
                     <View style={styles.Button}>
 
                         <TouchableOpacity onPress={props.onPress} style={props.buttonNameStyles}>
                             <Text style={styles.ButtonText}>{props.ButtonName}</Text>
-                            <FontAwesome name={props.Icon}  color="#fff" size={18}/>
+                            <FontAwesome name={props.Icon} color="#fff" size={18} />
 
                         </TouchableOpacity>
                     </View>
-                </View>
 
             </View>
         </View>

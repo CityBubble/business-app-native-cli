@@ -113,21 +113,21 @@ const styles = StyleSheet.create({
         color: '#ECC710',
         letterSpacing: 0.7,
         left: wp('2%'),
-        fontSize: wp('5.3%'),
+        fontSize: wp('4.3%'),
         fontWeight: '800'
     },
     statusTextPurple: {
         color: '#9370DB',
         letterSpacing: 0.7,
-        left: wp('2%'),
-        fontSize: wp('5.3%'),
+        left: wp('3%'),
+        fontSize: wp('4.5%'),
         fontWeight: '800'
     },
     statusTextGreen: {
         color: '#9370DB',
         letterSpacing: 0.7,
-        left: wp('2%'),
-        fontSize: wp('5.3%'),
+        left: wp('3%'),
+        fontSize: wp('4.3%'),
         fontWeight: '800'
     },
     dashboardScreenContainer: {
@@ -193,6 +193,9 @@ const styles = StyleSheet.create({
         width: wp('70%'),
         height: hp('35%')
     },
+    scrollStyle:{
+marginBottom:hp('10%')
+    }
   
 
 })

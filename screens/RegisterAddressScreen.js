@@ -22,12 +22,12 @@ const RegisterAddressScreen = ({ navigation }) => {
                   <View style={registerAddressStyles.registerScreenInput}>
 
                         <View style={registerAddressStyles.inputContainerInput}>
-                              <Text style={registerAddressStyles.registerLabel}> City</Text>
+                              <Text style={registerAddressStyles.registerLabel}> Primary number</Text>
                               <Card style={registerAddressStyles.Cards}>
                                     <View style={registerAddressStyles.registerTextImage}>
-                                          <Image source={require(`../assets/Form/City.png`)} style={styles.Icon} />
+                                          <Image source={require(`../assets/Form/Phone.png`)} style={styles.Icon} />
                                           <InputBox
-                                                Title="City" />
+                                                Title="Phone number" />
                                     </View>
                               </Card>
                         </View>

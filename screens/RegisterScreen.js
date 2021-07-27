@@ -4,15 +4,33 @@ import { StyleSheet, Text, View, Image, KeyboardAvoidingView } from 'react-nativ
 import { Card } from 'react-native-shadow-cards'
 import InputBox from '../components/Inputbox'
 import Registerstyles from '../styles/Register'
-
+import { Dropdown, MultiSelect } from 'react-native-element-dropdown'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 import Button from '../components/Button'
+import styles from '../styles/componentStyles/InputBox'
+
+const data = [
+    { label: 'Fashion', value: '1' },
+    { label: 'Food', value: '2' },
+    { label: 'Electronics', value: '3' },
+    { label: 'Health', value: '4' }
+]
+
+
 const Register = ({ navigation, route }) => {
     const [Bname, setBname] = useState()
     const [Bnature, setBnature] = useState()
+    const [dropdown, setDropdown] = useState(null)
+    const [MultiDropdown, setMutiDropdown] = useState(null)
+    const [selected, setSelected] = useState([])
 
-    let data = route.params
-    let number = data.phonenumber
-    // let phonenumber={phonenumber:number}
+    const _renderItem = item => {
+        return (
+            <View style={styles.item}>
+                <Text style={styles.textItem}>{item.label}</Text>
+            </View>
+        )
+    }
 
     return (
         <SafeAreaView style={Registerstyles.registerScreen}>
@@ -46,24 +64,53 @@ const Register = ({ navigation, route }) => {
                         <Card style={Registerstyles.Cards}>
                             <View style={Registerstyles.registerTextImage}>
                                 <Image source={require(`../assets/Form/nature.png`)} style={Registerstyles.Icon} />
-                                <InputBox
-                                    Title="Bakery, Sports, Cosmetics,....."
-                                    value={Bnature}
-                                    onchangeText={(e) => { setBnature(e.target.value) }}
+                                
+                                <Dropdown
+                                    style={styles.dropdown}
+                                    containerStyle={styles.shadow}
+                                    data={data}
+                                    labelField="label"
+                                    valueField="value"
+                                    placeholder="Select Business"
+                                    placeholderStyle={styles.placeholderStyle}
+                                    value={dropdown}
+                                    onChange={item => {
+                                        setDropdown(item.value);
+                                        console.log('selected', item);
+                                    }}
+                                  
+                                    renderItem={item => _renderItem(item)}
+                                    textError="Error"
+                                    selectedTextStyle={styles.selectedText}
                                 />
+                               
                             </View>
                         </Card>
                     </View>
                     <View style={Registerstyles.inputContainerSecondary}>
-                        <Text style={Registerstyles.registerLabel}>Primary contact</Text>
+                        <Text style={Registerstyles.registerLabel}>Categories</Text>
                         <Card style={Registerstyles.Cards}>
                             <View style={Registerstyles.registerTextImage}>
-                                <Image source={require(`../assets/Form/Phone.png`)} style={Registerstyles.Icon} />
-                                <InputBox
-                                    Title="Enter 10-digit number"
-                                    keybord='numeric'
-
-                                />
+                            
+                               <MultiSelect
+                               
+                               style={styles.dropdown}
+                               containerStyle={styles.shadow}
+                               data={data}
+                               labelField="label"
+                               valueField="value"
+                               placeholder="Select categories"
+                               placeholderStyle={styles.placeholderStyle}
+                               value={MultiDropdown}
+                               onChange={item => {
+                                setMutiDropdown(item.value);
+                                   console.log('selected', item);
+                               }}
+                             
+                               renderItem={item => _renderItem(item)}
+                               textError="Error"
+                               selectedTextStyle={styles.selectedText}
+                               />
 
                             </View>
                         </Card>

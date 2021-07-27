@@ -7,7 +7,7 @@ import locationStyles from '../styles/Location'
 
 const LocationScreen = ({ navigation }) => {
 
-  const [choosecity, setChooseCity] = useState('Select City .....');
+  const [choosecity, setChooseCity] = useState('');
   const [isModalVisible, setIsModalVisible] = useState(false)
   const chooseModalVisibility = (condition) => {
     setIsModalVisible(condition)
@@ -44,7 +44,7 @@ const LocationScreen = ({ navigation }) => {
           style={locationStyles.locationTouchable}
           onPress={() => chooseModalVisibility(true)}>
           <Image source={require('../assets/Image/City.png')} />
-          <Text style={locationStyles.dropdownText}>{choosecity}</Text>
+          <Text style={locationStyles.dropdownText}>{choosecity?choosecity:'Select City'}</Text>
         </TouchableOpacity>
         <Modal
           transparent={true}

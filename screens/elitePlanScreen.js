@@ -5,6 +5,7 @@ import styles from '../styles/plans'
 import SubscriptionTag from '../components/SubscriptionTag'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import PlansInfo from '../components/PlansInfo'
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
 let state = "Subscribed"
 let plans = "AboutToFinish"
@@ -45,7 +46,7 @@ const ElitePlans = ({ navigation }) => {
                         <View style={styles.PriceTag}>
                             <SubscriptionTag
                                 Image={require('../assets/plans/Crown.png')}
-                                ImageStyle={{ width: 30, height: 22 }}
+                                ImageStyle={{ width: wp('1%'), height: hp('2%') }}
                                 price={styles.ElitePrice}
                                 planName="Elite"
                                 planPrice="2399"
@@ -96,7 +97,7 @@ const ElitePlans = ({ navigation }) => {
                                 <SubscriptionTag
                                     Image={require('../assets/plans/Crown.png')}
                                     planName="Elite"
-                                    ImageStyle={{ width: 30, height: 22 }}
+                                    ImageStyle={{ width: wp('6.5%'), height: hp('2%') }}
                                     planPrice="2399"
                                     price={styles.ElitePrice}
                                     month="@12 month"
@@ -117,6 +118,7 @@ const ElitePlans = ({ navigation }) => {
                                     <PlansInfo
                                         styleBox={styles.boxEliteDiamond}
                                         Image={require('../assets/plans/diamond.png')}
+                                        ImageStyle={styles.imgPlanDiamond}
                                         PlanName="Premium"
                                         Underline={styles.PlanUnderlineDiamond}
                                         iconColor='#FF7100'
@@ -133,7 +135,7 @@ const ElitePlans = ({ navigation }) => {
                                     <PlansInfo
                                         styleBox={styles.boxElite}
                                         Image={require('../assets/plans/Crown.png')}
-                                        ImageStyle={{ width: 89, height: 59 }}
+                                        ImageStyle={styles.imgPlanElite}
                                         PlanName="Elite"
                                         Underline={styles.PlanUnderline}
                                         iconColor='#6324D2'
@@ -150,6 +152,7 @@ const ElitePlans = ({ navigation }) => {
                                     <PlansInfo
                                         styleBox={styles.boxEliteFav}
                                         Image={require('../assets/plans/favourites.png')}
+                                        ImageStyle={styles.imgPlanFav}
                                         PlanName="Basic"
                                         Underline={styles.PlanUnderlineFav}
                                         iconColor='#FFC228'

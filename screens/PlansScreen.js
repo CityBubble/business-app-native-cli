@@ -5,6 +5,7 @@ import styles from '../styles/plans'
 import SubscriptionTag from '../components/SubscriptionTag'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import PlansInfo from '../components/PlansInfo'
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
 let state = "Under Promotional"
 let plans = "AboutToFinish"
@@ -46,7 +47,7 @@ const PlanScreen = ({ navigation }) => {
                         <View style={styles.PriceTag}>
                             <SubscriptionTag
                                 Image={require('../assets/plans/diamond.png')}
-                                ImageStyle={{ width: 15, height: 15 }}
+                                ImageStyle={{ width: wp('5%'), height: hp('2%') }}
                                 price={styles.premiumStyle}
                                 planName="Premium"
                                 planPrice="1999"
@@ -97,7 +98,7 @@ const PlanScreen = ({ navigation }) => {
                                     Image={require('../assets/plans/diamond.png')}
                                     planName="Premium"
                                     Icon="refresh"
-                                    ImageStyle={{ width: 15, height: 15 }}
+                                    ImageStyle={{ width: wp('5%'), height: hp('2%') }}
                                     price={styles.premiumStyle}
                                     planPrice="1999"
                                     month="@1 month"

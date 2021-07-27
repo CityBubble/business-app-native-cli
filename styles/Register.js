@@ -62,7 +62,8 @@ const Registerstyles = StyleSheet.create({
     Icon: {
         width:Platform.OS==='ios'?wp('6.9%'):wp('7.4%'),
         height: Platform.OS === 'ios' ? hp('3.4%') : hp('4.2%'),
-    }
+    },
+  
 
 
 })

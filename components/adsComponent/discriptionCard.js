@@ -59,10 +59,10 @@ const DiscriptionCard = (props) => {
                     showsHorizontalScrollIndicator={false}
                 >
                     <View style={styles.ImageContainer}>
-                        <Image source={require('../../assets/ads/mixVeg.jpg')} style={styles.imageStyles} />
+                        <Image source={require('../../assets/test/testCase.png')} style={styles.imageStyles} />
                     </View>
                     <View style={styles.ImageContainer}>
-                        <Image source={require('../../assets/ads/carrot.jpg')} style={styles.imageStyles}/>
+                        <Image source={require('../../assets/test/offerDelhi.png')} style={styles.imageStyles}/>
                     </View>
                     <View style={styles.ImageContainer}>
                         <Image source={require('../../assets/ads/beetRoot.jpg')} style={styles.imageStyles} />

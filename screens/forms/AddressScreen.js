@@ -11,59 +11,31 @@ const AddressScreen = ({ navigation }) => {
                 <TouchableOpacity onPress={() => { navigation.navigate('ProfileScreen') }} >
                     <Image source={require('../../assets/Image/back.png')} style={styles.headerImage} />
                 </TouchableOpacity>
-
                 <TouchableOpacity>
                     <Text style={styles.headerText}>Address</Text>
                 </TouchableOpacity>
-
             </View>
             <View style={styles.textBox}>
-
-
                 <View style={styles.textContainer}>
                     <Text style={styles.textHeading}>City</Text>
-
                     <Card style={styles.Cards}>
-
-                        <TextComponent
-
-
-                        />
+                        <TextComponent />
                     </Card>
                 </View>
-                <View style={styles.textContainerTwo}>
-                    <Text style={styles.textHeading}>Area</Text>
+                <Text style={styles.textHeading}>Area</Text>
 
-                    <Card style={styles.Cards}>
+                <Card style={styles.Cards}>
+                    <TextComponent />
+                </Card>
+                <Text style={styles.textHeading}>Pincode</Text>
+                <Card style={styles.Cards}>
+                    <TextComponent />
+                </Card>
+                <Text style={styles.textHeading}>Full address</Text>
+                <Card style={styles.Cards}>
+                    <TextComponent />
+                </Card>
 
-                        <TextComponent
-
-
-                        />
-                    </Card>
-                </View>
-                <View style={styles.textContainerTwo}>
-                    <Text style={styles.textHeading}>Pincode</Text>
-
-                    <Card style={styles.Cards}>
-
-                        <TextComponent
-
-
-                        />
-                    </Card>
-                </View>
-                <View style={styles.textContainerTwo}>
-                    <Text style={styles.textHeading}>Full address</Text>
-
-                    <Card style={styles.Cards}>
-
-                        <TextComponent
-
-
-                        />
-                    </Card>
-                </View>
             </View>
         </View>
     )

@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         top: hp('15%'),
         left: wp('10%'),
     },
-    textContainerTwo: {
+    textContainerContact: {
         top: hp('22%'),
         left: wp('10%'),
     },
@@ -55,7 +55,12 @@ const styles = StyleSheet.create({
     },
     edit: {
         left: wp('65%')
-    }
+    },
+    Input: {
+        color: '#fff',
+        padding: 12,
+        fontSize: 16,
+    },
 })
 
 export default styles

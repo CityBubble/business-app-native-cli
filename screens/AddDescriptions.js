@@ -16,7 +16,7 @@ const AddDescriptions = ({ navigation }) => {
                     <Image source={require('../assets/plans/veg.jpg')} style={styles.image} />
                 </View>
                 <View style={styles.headerStyle}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                    <TouchableOpacity onPress={() => navigation.goBack('Home')}>
                         <View style={styles.BackIcon}>
                             <Image source={require('../assets/Image/back.png')} style={{ width: 20, height: 20 }} />
                         </View>

@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         left: wp('7%'),
 
     },
-    textContainerTwo: {
+    textContainerBusiness: {
         top: hp('22%'),
         left: wp('7%'),
     },

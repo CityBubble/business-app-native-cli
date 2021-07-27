@@ -10,55 +10,59 @@ const styles = StyleSheet.create({
     },
     cardAdd: {
         backgroundColor: '#292930',
-        height: hp('12.6%'),
+        height: hp('7.0%'),
         justifyContent: 'space-between',
         alignItems: 'center'
-
-    },
+},
     state: {
         color: '#05EC41',
-        margin: wp('2%'),
-        fontSize: hp('2.4%'),
+        fontSize: hp('2.2%'),
         fontWeight: '500',
         letterSpacing: 0.5
     },
-
+    
     Calender: {
         flexDirection: 'row',
         alignItems: 'center',
-        padding: wp('3%'),
-        bottom:hp('2%')
-
+        top:hp('1%')
+        
+        
     },
     CalenderTicket: {
         flexDirection: 'row',
         alignItems: 'center',
-        padding: wp('3%')
+        
 
     },
     Validity: {
         flexDirection: 'column',
+       textAlign:'left',
+       bottom:hp('0.5%')
         },
 
     Date: {
         color: '#fff',
-        left: wp('0.1%'),
-        fontSize: hp('2.4%')
+        fontSize: hp('1.9%'),
+        top:hp('1%')
     },
     ticket: {
         color: '#fff',
-        left: wp('2%'),
-        fontSize: hp('2.4%'),
-        fontWeight: '500',
+        fontSize: hp('2%'),
+        // fontWeight: '500',
         letterSpacing: 0.5
     },
     Views: {
         color: '#fff',
-        left: wp('2%'),
-        fontSize: hp('2.4%'),
-        fontWeight: '500',
+        fontSize: hp('2%'),
+        // fontWeight: '500',
         letterSpacing: 0.5
     },
-
+    secondHalf:{
+        bottom:hp('0.5%')
+    },
+    Icon:{
+        right:wp('1.2%')
+    }
+    
 })
 export default styles

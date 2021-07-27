@@ -6,6 +6,7 @@ import { TextInput } from 'react-native-gesture-handler'
 import { Image } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import otpStyles from '../styles/Otp'
+import styles from '../styles/componentStyles/InputBox'
 
 const Otp = ({ route, navigation }) => {
 
@@ -26,7 +27,7 @@ const Otp = ({ route, navigation }) => {
         setOtpVal(val)
         // setOtpVal((OtpVal) => val);
         if (val.length === lengthInput && val === Otp) {
-            navigation.replace('RegisterScreen', { phonenumber })
+            navigation.replace('waitingScreen')
 
         }
         else if (val.length === lengthInput && val !== Otp) {
@@ -41,8 +42,11 @@ const Otp = ({ route, navigation }) => {
                 <View>
                     <Text style={otpStyles.otpHeading}>Enter the OTP</Text>
                     <View style={otpStyles.textStyles}>
-                        <Text style={otpStyles.otpText}>{`Please check for the OTP received on your number `}</Text>
-                        <Text style={otpStyles.textNumber}>{number}</Text>
+                        <Text style={otpStyles.otpText}>{`Please check for the OTP received ` }</Text>
+                        <View style={otpStyles.numberView}>
+                            <Text style={ otpStyles.otpTextTwo}>on your number</Text>
+                            <Text style={otpStyles.textNumber}>{number}</Text>
+                        </View>
                     </View>
                 </View>
             )

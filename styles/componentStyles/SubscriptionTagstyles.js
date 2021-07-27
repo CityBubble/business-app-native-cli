@@ -4,9 +4,9 @@ const styles = StyleSheet.create({
 
     insideBlock: {
         backgroundColor: '#363841',
-        width: wp('90%'),
+        width: wp('92%'),
         alignItems: 'center',
-        height: hp('33%'),
+        height: hp('30%'),
         borderRadius: 12,
         justifyContent: 'space-evenly'
     },
@@ -17,13 +17,12 @@ const styles = StyleSheet.create({
     },
     Heading: {
         flexDirection: 'row',
-        padding: wp('3%'),
         alignItems: 'center'
     },
 
     priceFix: {
         flexDirection: 'row',
-        top: hp('1%')
+       
     },
     TextPrice: {
         color: '#fff',
@@ -39,13 +38,10 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: hp('2%'),
         fontWeight: '600',
-        top: hp('2%')
+        
     }
-    , detailAds: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-    },
+,
+   
     InfoText: {
         right: wp('5%'),
         fontSize: hp('2.2%'),
@@ -53,14 +49,17 @@ const styles = StyleSheet.create({
         color: '#B4B4B4'
     },
     InfoDetail: {
-        textAlign: 'right',
+        // textAlign: 'right',
         left: wp('13%'),
         fontSize: hp('1.8%'),
         color: '#fff',
         fontWeight: '600'
     },
     AddDetail: {
-        padding: wp('2%')
+        top: wp('2%'),
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
     },
     plans: {
         alignItems: 'center',
@@ -88,7 +87,8 @@ const styles = StyleSheet.create({
     ButtonText: {
         color: '#fff',
         fontWeight: '700',
-        right: wp('2%')
+        right: wp('2%'),
+        fontSize:hp('1.7%')
 
     },
     Button: {

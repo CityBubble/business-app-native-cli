@@ -5,7 +5,6 @@ import DuesComponents from '../../components/DuesComponents'
 import OverallDues from '../../components/OverallDues'
 import styles from '../../styles/dashboardScreen/duesScreen'
 const duesScreens = ({ navigation }) => {
-    const [change, setChange] = useState(false)
     const [Dues, setDues] = useState(true)
     const [active, setActive] = useState(true)
     const [current, setCurrent] = useState(false)
@@ -14,19 +13,14 @@ const duesScreens = ({ navigation }) => {
 
     const AddsChange = () => {
         navigation.navigate('Home')
-        setChange(false)
-        setDues(true)
     }
     const DuesChange = () => {
         setDues(false)
-        setChange(true)
     }
-
     const setUp = () => {
         setActive(true)
         setCurrent(false)
         setOverall(false)
-
     }
     const setUpCurrent = () => {
         setActive(false)
@@ -38,13 +32,10 @@ const duesScreens = ({ navigation }) => {
         setCurrent(false)
         setOverall(true)
     }
-
     const ScreenDisplay = () => {
         if (active) {
             if (state === "end") {
-
                 return (
-
                     <DuesComponents
                         date="16 Oct -16 Nov,2021"
                         addGenrated="02"
@@ -56,9 +47,7 @@ const duesScreens = ({ navigation }) => {
                         ButtonStyles={styles.btnStyles}
                         ButtonName="Pay Now"
                         duesContainer={styles.DueContainer}
-
-                    />
-                )
+                    />)
             }
             else {
                 return (
@@ -66,7 +55,6 @@ const duesScreens = ({ navigation }) => {
                         scrollEventThrottle={16}
                         showsVerticalScrollIndicator={false}
                     >
-
                         <View style={styles.dueSetup}>
                             <Text style={styles.HeadingDue}>You have cleared all your dues</Text>
                             <View style={styles.dueCard}>
@@ -118,7 +106,6 @@ const duesScreens = ({ navigation }) => {
             }
             else {
                 return (
-
                     <DuesComponents
                         date="16 Oct -16 Nov,2021"
                         addGenrated="01"
@@ -129,7 +116,6 @@ const duesScreens = ({ navigation }) => {
                 )
             }
         }
-
         else if (Overall) {
             return (
                 <OverallDues
@@ -147,18 +133,16 @@ const duesScreens = ({ navigation }) => {
                 add={AddsChange}
                 TextButton={{
                     fontSize: 22,
-                    color: change ? '#4852FF' : '#A5A5A5',
+                    color: '#A5A5A5',
                     fontWeight: '700',
                     textAlign: 'center'
                 }}
-
                 underline={{
-                    backgroundColor: change ? "#4852FF" : 'transparent',
+                    backgroundColor: 'transparent',
                     width: 69,
                     height: 3,
                     top: 2
                 }}
-
                 TextButtonTwo={{
                     fontSize: 22,
                     color: Dues ? '#4852FF' : '#A5A5A5',

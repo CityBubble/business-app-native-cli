@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
         left:wp('3%')
     },
     imageStyles:{ 
-        width: wp('29%'),
-         height: hp('15'), 
+        width: 327,
+         height: 104, 
          borderRadius: 12 
     }
 

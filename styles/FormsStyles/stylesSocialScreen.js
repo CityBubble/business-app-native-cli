@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     Header: {
         flexDirection: 'row',
         alignItems: 'center',
-        top: hp('2%')
+        marginTop: hp('2%')
    },
     headerImage: {
         left: wp('4%'),
@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     },
     textBox: {
         top: hp('5%'),
-        left: wp('1.2%')
+        left: wp('1.2%'),
+        height:hp('100%')
     },
     icons: {
         flexDirection: 'row',
@@ -53,6 +54,15 @@ const styles = StyleSheet.create({
     },
     edit: {
         left: wp('67%')
+    },
+    Input: {
+        color: '#fff',
+        padding: wp('2.2%'),
+        fontSize: hp('2%'),
+    },
+    textInput:{
+        flexGrow:1,
+        alignItems:'center'
     }
 
 })

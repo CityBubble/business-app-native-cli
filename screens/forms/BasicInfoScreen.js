@@ -12,36 +12,20 @@ const BasicInfoScreen = ({ navigation }) => {
                 <TouchableOpacity onPress={() => { navigation.navigate('ProfileScreen') }} >
                     <Image source={require('../../assets/Image/back.png')} style={styles.headerImage} />
                 </TouchableOpacity>
-
                 <TouchableOpacity>
                     <Text style={styles.headerText}>Basic Info</Text>
                 </TouchableOpacity>
-
             </View>
             <View style={styles.textBox}>
-
-
                 <View style={styles.textContainer}>
                     <Text style={styles.textHeading}>Business name</Text>
-
                     <Card style={styles.Cards}>
-
-                        <TextComponent
-
-
-                        />
+                        <TextComponent />
                     </Card>
                 </View>
-                <View style={styles.textContainerTwo}>
+                <View style={styles.textContainerBusiness}>
                     <Text style={styles.textHeading}>Category of business</Text>
-
-                    <Card style={styles.Cards}>
-
-                        <TextComponent
-
-
-                        />
-                    </Card>
+                    <Card style={styles.Cards}><TextComponent /> </Card>
                 </View>
             </View>
         </View>

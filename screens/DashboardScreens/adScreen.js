@@ -7,28 +7,22 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import DashboardHeader from '../../components/DashboardHeader'
 import styles from '../../styles/dashboardScreen/adScreen'
 const adScreen = ({ navigation }) => {
-    const [change, setChange] = useState(true)
-    const [Dues, setDues] = useState(false)
+    const [Ads, setAds] = useState(true)
     const [cancel, setCancel] = useState(false)
-    key = 2
+    key = 1
     state = 2
-    const AddsChange = () => {
+    const addsChange = () => {
+        setAds(true)
 
-        setChange(true)
-        setDues(false)
     }
-    const DuesChange = () => {
+    const duesChange = () => {
         navigation.navigate('dueScreen')
-        setDues(true)
-        setChange(false)
     }
 
     const cancelAlert = () => {
         switch (key) {
             case 1:
-                if (cancel) {
-
-                }
+                if (cancel) { }
                 else {
                     return (<SubscriptionAlert
                         Warningtext="Subscription expires in"
@@ -41,14 +35,11 @@ const adScreen = ({ navigation }) => {
                         IconName={'times'}
                         IconStyle={styles.IconMove}
                         iconPress={() => setCancel(true)}
-                         />)
- 
-                    }
+                    />)
+                }
                 break;
             case 2:
-                if (cancel) {
-
-                }
+                if (cancel) { }
                 else {
                     return (<SubscriptionAlert
                         Warningtext="Subscription expires in"
@@ -64,9 +55,7 @@ const adScreen = ({ navigation }) => {
                 }
                 break;
             case 3:
-                if (cancel) {
-
-                }
+                if (cancel) { }
                 else {
                     return (<SubscriptionAlert
                         Warningtext="Your ads are freezed kindly subscribe to resume"
@@ -83,15 +72,12 @@ const adScreen = ({ navigation }) => {
                     />)
                 }
                 break;
-
             default:
                 break;
         }
-
-
     }
 
-    const HomeScreen = () => {
+    const homeScreen = () => {
         switch (state) {
             case 1:
                 return (
@@ -124,79 +110,84 @@ const adScreen = ({ navigation }) => {
                 return (
                     <View>
 
-                        <View style={styles.alertBanner}>
-                            {cancelAlert()}
-                        </View>
-                        <ScrollView
-                            showsVerticalScrollIndicator={false}
-                            scrollEventThrottle={16}
-                            
-                        >
-                            <View style={styles.addDiscription}>
-                                <TouchableOpacity onPress={() => navigation.navigate('AddDescriptions')}>
-                                    <AddDiscription
-                                        Image={require('../../assets/plans/veg.jpg')}
-                                        date="27 Oct, 2021"
-                                        ticket="300 coupons"
-                                        Views="1000 views"
-                                    />
-                                </TouchableOpacity>
-                            </View>
 
-                            <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                <BannerDiscription
-                                    offerContainer={styles.offerContainer}
-                                    offer="Upto 20% Off"
-                                    state="Under Review"
-                                    statusColor={styles.statusText}
-                                    DateRequested="27 Oct, 2021"
-                                />
-                            </TouchableOpacity>
-                            <View>
-                                <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                    <BannerDiscription
-                                        offerContainer={styles.offerContainerPurple}
-                                        offer="Upto 20% Off"
-                                        state="Under Review"
-                                        statusColor={styles.statusTextPurple}
-                                        DateRequested="27 Oct, 2021"
-                                    />
-                                </TouchableOpacity>
+                        <View >
+
+                            <View style={styles.alertBanner}>
+                                {cancelAlert()}
                             </View>
-                            <View>
-                                <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                    <BannerDiscription
-                                        offerContainer={styles.offerContainerGreen}
-                                        offer="Upto 20% Off"
-                                        state="Under Review"
-                                        statusColor={styles.statusTextPurple}
-                                        DateRequested="27 Oct, 2021"
-                                    />
-                                </TouchableOpacity>
-                            </View>
-                        </ScrollView>
+                            <ScrollView
+                                showsVerticalScrollIndicator={false}
+                                scrollEventThrottle={16}
+                                style={styles.scrollStyle}
+                            >
+                                <View >
+                                    <TouchableOpacity onPress={() => navigation.navigate('AddDescriptions')}>
+                                        <AddDiscription
+                                            Image={require('../../assets/plans/veg.jpg')}
+                                            date="Expires in 100 days"
+                                            ticket="300 coupons"
+                                            Views="1000 views"
+                                        />
+                                    </TouchableOpacity>
+                                </View>
+                                <View>
+                                    <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
+                                        <BannerDiscription
+                                            offerContainer={styles.offerContainer}
+                                            offer="Upto 20% Off"
+                                            state="Under Review"
+                                            statusColor={styles.statusText}
+                                            DateRequested="27 Oct, 2021"
+                                        />
+                                    </TouchableOpacity>
+                                </View>
+
+                                <View>
+                                    <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
+                                        <BannerDiscription
+                                            offerContainer={styles.offerContainerPurple}
+                                            offer="Upto 20% Off"
+                                            state="Under Review"
+                                            statusColor={styles.statusTextPurple}
+                                            DateRequested="27 Oct, 2021"
+                                        />
+                                    </TouchableOpacity>
+                                </View>
+                                <View>
+                                    <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
+                                        <BannerDiscription
+                                            offerContainer={styles.offerContainerGreen}
+                                            offer="Upto 20% Off"
+                                            state="Under Review"
+                                            statusColor={styles.statusTextPurple}
+                                            DateRequested="27 Oct, 2021"
+                                        />
+                                    </TouchableOpacity>
+                                </View>
+                            </ScrollView>
+                        </View>
                     </View>
                 )
                 break;
         }
     }
 
-
     return (
         <View style={styles.adContainer}>
             <DashboardHeader
                 uri='https://images.pexels.com/photos/7597322/pexels-photo-7597322.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
                 onPress={() => { navigation.navigate('ProfileScreen') }}
-                add={AddsChange}
+                add={addsChange}
                 TextButton={{
                     fontSize: 22,
-                    color: change ? '#4852FF' : '#A5A5A5',
+                    color: Ads ? '#4852FF' : '#A5A5A5',
                     fontWeight: '700',
                     textAlign: 'center'
                 }}
 
                 underline={{
-                    backgroundColor: change ? "#4852FF" : 'transparent',
+                    backgroundColor: Ads ? "#4852FF" : 'transparent',
                     width: 69,
                     height: 3,
                     top: 2
@@ -204,19 +195,14 @@ const adScreen = ({ navigation }) => {
 
                 TextButtonTwo={{
                     fontSize: 22,
-                    color: Dues ? '#4852FF' : '#A5A5A5',
+                    color: '#A5A5A5',
                     fontWeight: '700',
                     textAlign: 'center'
                 }}
-                underlineTwo={{
-                    backgroundColor: Dues ? "#4852FF" : 'transparent',
-                    width: 69,
-                    height: 3,
-                    top: 2
-                }}
-                dues={DuesChange}
+
+                dues={duesChange}
             />
-            {HomeScreen()}
+            {homeScreen()}
         </View>
     )
 }

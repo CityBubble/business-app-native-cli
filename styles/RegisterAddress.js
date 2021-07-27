@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
             alignItems:'center',
       },
       Icon:{
-        width:Platform.OS==='ios'?wp('6.9%'):wp('7.9%'), 
-          height:Platform.OS==='ios'? hp('3.9%'):hp('4.2%') 
+        width:Platform.OS==='ios'?wp('6.5%'):wp('7.9%'), 
+          height:Platform.OS==='ios'? hp('3.0%'):hp('4.2%') 
       }
 })
 

@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
     UnderlinePlans: {
         backgroundColor: '#A5A5A5',
         width: wp('40%'),
-        height: 0.8,
-        top: hp('00.3%')
+        height: 0.5,
+        top: hp('1%')
     },
     PlansCards: {
     margin: hp('2%')
@@ -86,19 +86,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#6324D2',
         width: wp('30%'),
         height: hp('0.2%'),
-        top: hp('0.2%')
-    },
+        },
     PlanUnderlineDiamond: {
         backgroundColor: '#FF7100',
         width: wp('30%'),
         height: hp('0.2%'),
-        top: hp('0.2%')
-    },
+      },
     PlanUnderlineFav: {
         backgroundColor: '#FFC288',
         width: wp('30%'),
         height: hp('0.2%'),
-        top: hp('0.2%')
+      
     },
     boxElite: {
         borderWidth: 4,
@@ -106,10 +104,11 @@ const styles = StyleSheet.create({
         padding: wp('3%'),
         borderRadius: 10,
         borderColor: '#6324D2',
-        width: wp('90%'),
-        height: hp('33.9%'),
+        width: wp('87%'),
+        height: hp('29.9%'),
         top: hp('1%'),
-        backgroundColor: '#14161d'
+        backgroundColor: '#14161d',
+        justifyContent:'center'
     },
     boxEliteDiamond: {
         borderWidth: 4,
@@ -118,9 +117,10 @@ const styles = StyleSheet.create({
         padding: wp('3%'),
         borderRadius: 10,
         borderColor: '#FF7100',
-        width: wp('90%'),
-        height: hp('33.5%'),
-        // top: 10
+        width: wp('87%'),
+        height: hp('29.9%'),
+        justifyContent:'center'
+        
     },
     boxEliteFav: {
         borderWidth: 4,
@@ -129,109 +129,56 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderColor: '#FFC228',
         backgroundColor: '#14161d',
-        width: wp('90%'),
-        height: hp('33.5%'),
-        // top: 10
+        width: wp('87%'),
+        height: hp('29.9%'),
+      justifyContent:'center'
     },
     buttonName: {
         backgroundColor: '#6324D2',
         alignItems: 'center',
-        padding: wp('1.3%'),
-        top: hp('1%'),
+        padding: wp('1%'),
+        top: hp('2.5%'),
         borderRadius: 5,
         flexDirection: 'row',
         justifyContent: 'center',
-        width: wp('35%'),
-        left: wp('7%')
+        width: wp('32.8%'),
+        left: wp('10%')
     },
     buttonNameDiamond: {
         backgroundColor: '#FF7100',
         alignItems: 'center',
-        padding: wp('1.3%'),
-        top: hp('1%'),
+        padding: wp('1%'),
+        top: hp('2.5%'),
         borderRadius: 5,
         flexDirection: 'row',
         justifyContent: 'center',
-        width: wp('35%'),
-        left: wp('7%')
+        width: wp('32.8%'),
+        left: wp('10%')
     },
     buttonNameFav: {
         backgroundColor: '#FFC228',
         alignItems: 'center',
-        padding: wp('1.3%'),
-        top: hp('1%'),
+        padding: wp('1%'),
+        top: hp('2.5%'),
         borderRadius: 5,
         flexDirection: 'row',
         justifyContent: 'center',
-        width: wp('35%'),
-        left: wp('7%')
+        width: wp('32.8%'),
+        left: wp('10%')
     },
-    buttonNameStyles: {
-        backgroundColor: '#FD8B3C',
-        alignItems: 'center',
-        padding: wp('2%'),
-        top: hp('1%'),
-        borderRadius: 5,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        width: wp('40%'),
-        left: wp('6%')
-    },
+   
 
-    buttonNameStylesCrown: {
-        backgroundColor: '#6324D2',
-        alignItems: 'center',
-        padding: wp('2%'),
-        top: wp('2%'),
-        borderRadius: 5,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        width: wp('40%'),
-        left: wp('6%')
-    },
-    buttonNameStylesFav: {
-        backgroundColor: '#FFC228',
-        alignItems: 'center',
-        padding: wp('2%'),
-        top: wp('2%'),
-        borderRadius: 5,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        width: wp('40%'),
-        left: wp('6%')
-    },
-    premiumStyle: {
-        backgroundColor: '#FD8B3C',
-        width: wp('90%'),
-        height: hp('13%'),
-        alignItems: 'center',
-        alignItems: 'center'
-    },
-    ElitePrice: {
-        backgroundColor: '#7630C4',
-        width: wp('90%'),
-        alignItems: 'center',
-        height: hp('13%'),
-        alignItems: 'center'
-    },
-    ElitePriceFav: {
-        backgroundColor: '#FFC228',
-        width: wp('90%'),
-        alignItems: 'center',
-        height: hp('13%'),
-        alignItems: 'center'
-    },
     imgPlanElite: {
-        width: wp('15.9%'),
-        height: hp('6.7%')
+        width: wp('16.4%'),
+        height: hp('5.4%')
     },
     imgPlanDiamond: {
-        width: wp('10.9%'),
-        height: hp('4.7%')
+        width: wp('12.1%'),
+        height: hp('5.4%')
     },
     imgPlanFav: {
-        width: wp('12.5%'),
-        height: hp('6.5%')
+        width: wp('12.9%'),
+        height: hp('6.4%')
     }
 
 

@@ -5,11 +5,10 @@ const styles = StyleSheet.create({
     ImageContainer: {
         alignItems: 'center',
     },
-
-
     TextPlans: {
-        top: hp('2%'),
-        left: wp('5%')
+        top: hp('1%'),
+        left: wp('5%'),
+       
     },
     Heading: {
         color: '#fff',
@@ -20,26 +19,25 @@ const styles = StyleSheet.create({
     info: {
         flexDirection: 'row',
         alignItems: 'center',
-        right: wp('2%')
-
     },
     TextInfo: {
         color: '#fff',
         left: wp('3%'),
-        textAlign: 'left'
+        textAlign: 'left',
+        fontSize:hp('2%')
     },
 
     ButtonText: {
         color: '#fff',
         fontWeight: '700',
-        right: wp('2%')
+        fontSize:hp('1.8%')
 
-    },
-    Button: {
-        padding: wp('2%')
     },
     arrow: {
         left: wp('3%')
+    },
+    aboveContainer:{
+        bottom:hp('1.5%')
     }
 
 
