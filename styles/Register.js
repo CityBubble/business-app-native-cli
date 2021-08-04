@@ -55,6 +55,10 @@ const Registerstyles = StyleSheet.create({
         left: wp('2%')
     },
 
+    registerDropDown: {
+        zIndex : 2000
+    },
+
 
     registerLogo: {
         alignItems: 'center',

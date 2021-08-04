@@ -1,16 +1,11 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
-import RegisterAddress from '../screens/RegisterAddressScreen';
-import Otp from '../screens/OtpScreen'
-import Login from '../screens/MobileLoginScreen'
-import Location from '../screens/LocationScreen'
-import Register from '../screens/RegisterScreen'
-import Proofs from '../screens/ProofsScreen'
+import waitingScreen from '../screens/waitingScreen';
 import waitingScreen from '../screens/waitingScreen';
 import GlobalStyles from '../components/GlobalStyles'
-import Tabnavigator from './tabNavigation';
+import Tabnavigator from './TabNavigation';
 import Profile from '../screens/ProfileScreen';
 import AddressScreen from '../screens/forms/AddressScreen';
 import BasicInfoScreen from '../screens/forms/BasicInfoScreen';
@@ -25,18 +20,12 @@ import Descriptions from '../screens/Descriptions';
 
 const Stack = createStackNavigator()
 
-export default function Navigation() {
+export default function MainNavigationStack() {
   return (
     <SafeAreaView style={GlobalStyles.droidSafeArea}>
       <StatusBar style="light" />
-      <NavigationContainer >
-        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Tabnavigator}  >
-          <Stack.Screen name="Location" component={Location} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Otp" component={Otp} />
-          <Stack.Screen name="RegisterScreen" component={Register} />
-          <Stack.Screen name="AddressScreen" component={RegisterAddress} />
-          <Stack.Screen name="ProofScreen" component={Proofs} />
+      <NavigationContainer  independent ={true}>
+        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Tabnavigator} >
           <Stack.Screen name="waitingScreen" component={waitingScreen} />
           <Stack.Screen name="TabNavigation" component={Tabnavigator} />
           <Stack.Screen name="ProfileScreen" component={Profile} />
@@ -54,12 +43,3 @@ export default function Navigation() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

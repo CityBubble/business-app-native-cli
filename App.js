@@ -7,16 +7,19 @@
  */
 
  import React from 'react';
- import { StyleSheet,SafeAreaView } from 'react-native';
- import Navigation from './navigation/Navigation';
- import GlobalStyles from './components/GlobalStyles'
+ import Routes from './navigation/MainRoute';
+ import { Provider } from 'react-redux'
+ import { createStore, applyMiddleware} from 'redux'
+ import RootReducer from './redux/reducer/RootReducer'
+ import thunk from 'redux-thunk'
  
- 
+ const store = createStore(RootReducer, applyMiddleware(thunk))
+
  
  export default function App() {
    return (
-     <SafeAreaView style={GlobalStyles.droidSafeArea}>
-        <Navigation/>
-     </SafeAreaView>
+     <Provider store={store}>
+       <Routes />
+     </Provider>
    );
  }

@@ -21,7 +21,7 @@ const DashboardStack = createStackNavigator()
 
 const DashboardStackScreen = () => {
     return (
-        <DashboardStack.Navigator screenOptions={{ headerShown: false }}>
+        <DashboardStack.Navigator screenOptions={{ headerShown: false }} initialRouteName={adScreen}>
             <DashboardStack.Screen name="Home" component={adScreen} />
             <DashboardStack.Screen name="dueScreen" component={duesScreens} />
             <DashboardStack.Screen name="ProfileScreen" component={Profile} />
@@ -29,7 +29,6 @@ const DashboardStackScreen = () => {
             <DashboardStack.Screen name="ElitePlans" component={ElitePlans} />
             <DashboardStack.Screen name="BasicPlans" component={BasicPlans} />
             <DashboardStack.Screen name="unSubscribe" component={unSubscribedScreen} />
-
         </DashboardStack.Navigator>
 
     )

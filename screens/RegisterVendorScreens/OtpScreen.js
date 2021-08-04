@@ -5,8 +5,8 @@ import { Text, View } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 import { Image } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import otpStyles from '../styles/Otp'
-import styles from '../styles/componentStyles/InputBox'
+import otpStyles from '../../styles/Otp'
+import styles from '../../styles/componentStyles/InputBox'
 
 const Otp = ({ route, navigation }) => {
 
