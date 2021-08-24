@@ -18,30 +18,37 @@ const adScreen = (props) => {
         {
           id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
           title: 'First Item',
+          ad_status : "active"
         },
         {
           id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
           title: 'Second Item',
+          ad_status : "active"
         },
         {
           id: '58694a0f-3da1-471f-bd96-145571e29d72',
           title: 'Third Item',
+          ad_status : "active"
         },
         {
             id: '58694a0f-3da1-471f-bd96-145571e2',
             title: 'Third Item',
+            ad_status : "active"
         },
         {
             id: '58694a0f-3da1-471f--145571e2',
             title: 'Third Item',
+            ad_status : "active"
         },
         {
             id: '58694a0f-3da1--bd96-145571e2',
             title: 'Third Item',
+            ad_status : "active"
         },
         {
             id: '58694a0f-471f-bd96-145571e2',
             title: 'Third Item',
+            ad_status : "active"
         },
       ];
     key = 1
@@ -119,17 +126,17 @@ const adScreen = (props) => {
         }
     }
 
-    const renderItem = ({adRecord})=>{
-        console.log("Ad Records"+JSON.stringify(adRecord))
-        if(adRecord.ad_status === "active"){
+    const renderItem = ({item})=>{
+        console.log("Ad Records"+JSON.stringify(item))
+        if(item.ad_status === "active"){
             return(
                 <TouchableOpacity onPress={() => navigation.navigate('AddDescriptions')}>
-                          <AddDiscription
-                            ImageUrl={adRecord.ad_image_url}
-                            date= {adRecord.expiredMessage}
-                            ticket={adRecord.coupons_count + " coupons"}
-                            Views={ adRecord.views+" views"}
-                      />
+                    <AddDiscription
+                        ImageUrl = "https://firebasestorage.googleapis.com/v0/b/fir-admin-6c81d.appspot.com/o/asr%2Fads%2FPhQeg3ZXyShajyqGa2Rb%2Fcover?alt=media&token=84cf7cbd-5d62-4355-b167-edf99b07e496"
+                        date="27 Oct, 2021"
+                        ticket="300 coupons"
+                        Views="1000 views"
+                    />
                 </TouchableOpacity>
             );
         }
@@ -257,12 +264,12 @@ const adScreen = (props) => {
             <View style={styles.alertBanner}>
                 {cancelAlert()}
             </View>
-            {/* <FlatList
-                data = {adRecords}
+            <FlatList
+                data = {DATA}
                 renderItem = {renderItem}
-                keyExtractor = {(adRecord) => adRecord.ad_id}
-            /> */}
-            {homeScreen()}
+                keyExtractor = {(item) => item.id}
+            />
+            {/* {homeScreen()} */}
         </View>
     )
 }
