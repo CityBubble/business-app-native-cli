@@ -8,9 +8,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import PlansScreen from '../screens/PlansScreen';
-import adScreen from '../screens/DashboardScreens/adScreen';
+import adScreen from '../screens/DashboardScreens/AdsDetailsScreen';
 import Profile from '../screens/ProfileScreen';
-import duesScreens from '../screens/DashboardScreens/duesScreens';
+import duesScreens from '../screens/DashboardScreens/PaymentDuesScreens';
 import PlanScreen from '../screens/PlansScreen';
 import ElitePlans from '../screens/elitePlanScreen';
 import BasicPlans from '../screens/basicPlanScreen';

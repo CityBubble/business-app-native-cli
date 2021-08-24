@@ -77,7 +77,7 @@ const RegisterAddressScreen = (props) => {
                                           <Text style={{ fontSize: 12, color: '#FF0D10' }}>{errorExist ? errorExist : null}</Text>
                                           <Card style={registerAddressStyles.Cards}>
                                                 <View style={registerAddressStyles.registerTextImage}>
-                                                      <Image source={require(`../assets/Form/Phone.png`)} style={styles.Icon} />
+                                                      <Image source={require(`../../assets/Form/Phone.png`)} style={styles.Icon} />
                                                       <View style={InputBoxStyles.inputboxContainer}>
                                                       <TextInput
                                                             placeholder={"Phone Number"}
@@ -101,7 +101,7 @@ const RegisterAddressScreen = (props) => {
                                           }
                                           <Card style={registerAddressStyles.Cards}>
                                                 <View style={registerAddressStyles.registerTextImage}>
-                                                      <Image source={require(`../assets/Form/Area.png`)} style={styles.Icon} />
+                                                      <Image source={require(`../../assets/Form/Area.png`)} style={styles.Icon} />
                                                       <View style={InputBoxStyles.inputboxContainer}>
                                                       <TextInput
                                                             placeholder={"Area Name"}
@@ -124,7 +124,7 @@ const RegisterAddressScreen = (props) => {
                                           }
                                           <Card style={registerAddressStyles.Cards}>
                                                 <View style={registerAddressStyles.registerTextImage}>
-                                                      <Image source={require(`../assets/Form/lock.png`)} style={styles.Icon} />
+                                                      <Image source={require(`../../assets/Form/lock.png`)} style={styles.Icon} />
                                                       <View style={InputBoxStyles.inputboxContainer}>
                                                       <TextInput
                                                             placeholder={"PinCode"}
@@ -148,7 +148,7 @@ const RegisterAddressScreen = (props) => {
                                           }
                                           <Card style={registerAddressStyles.secondCard}>
                                                 <View style={registerAddressStyles.registerTextImage}>
-                                                      <Image source={require(`../assets/Form/Address.png`)} style={styles.Icon} />
+                                                      <Image source={require(`../../assets/Form/Address.png`)} style={styles.Icon} />
                                                       <View style={InputBoxStyles.inputboxContainer}>
                                                       <TextInput
                                                             placeholder={"Address"}

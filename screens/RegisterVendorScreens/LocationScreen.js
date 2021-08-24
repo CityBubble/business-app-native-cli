@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Alert } from 'react-native'
 import { Text, View, Image, Modal, TouchableOpacity } from 'react-native'
-import ModalPicker from '../components/ModalPicker'
-import Button from '../components/Button'
-import locationStyles from '../styles/Location'
+import ModalPicker from '../../components/ModalPicker'
+import Button from '../../components/Button'
+import locationStyles from '../../styles/Location'
 
 const LocationScreen = ({ navigation }) => {
 
@@ -14,6 +14,7 @@ const LocationScreen = ({ navigation }) => {
   }
 
   const setLocation = () => {
+    console.log("Chose City" + choosecity)
     if (choosecity === "Select City .....") {
       Alert.alert(
         "Invalid Selection",
@@ -25,14 +26,14 @@ const LocationScreen = ({ navigation }) => {
       )
     }
     else {
-      navigation.navigate('Login')
+      navigation.navigate('Login',{choosecity})
     }
   }
 
   return (
     <View style={locationStyles.location}>
       <View style={locationStyles.locationContainer}>
-        <Image source={require('../assets/Image/location.png')} style={locationStyles.locationImage} />
+        <Image source={require('../../assets/Image/location.png')} style={locationStyles.locationImage} />
         <View style={locationStyles.locationText}>
           <Text style={locationStyles.locationAccess}>{`You are currently in `}</Text>
           <Text style={locationStyles.locationCity}>{choosecity}</Text>
@@ -43,7 +44,7 @@ const LocationScreen = ({ navigation }) => {
         <TouchableOpacity
           style={locationStyles.locationTouchable}
           onPress={() => chooseModalVisibility(true)}>
-          <Image source={require('../assets/Image/City.png')} />
+          <Image source={require('../../assets/Image/City.png')} />
           <Text style={locationStyles.dropdownText}>{choosecity?choosecity:'Select City'}</Text>
         </TouchableOpacity>
         <Modal

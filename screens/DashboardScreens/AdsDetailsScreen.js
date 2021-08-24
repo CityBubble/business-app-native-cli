@@ -1,16 +1,58 @@
-import React, { useState } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native'
+import React, { useState , useEffect } from 'react'
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image , FlatList, SafeAreaView} from 'react-native'
 import AddDiscription from '../../components/adsComponent/addDiscription'
 import BannerDiscription from '../../components/adsComponent/bannerDiscription'
 import SubscriptionAlert from '../../components/adsComponent/subscriptionAlert'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import DashboardHeader from '../../components/DashboardHeader'
 import styles from '../../styles/dashboardScreen/adScreen'
-const adScreen = ({ navigation }) => {
+import {connect} from 'react-redux';
+import {getAddDetails} from '../../redux/actions/VendorAdsActions';
+const adScreen = (props) => {
+    const { navigation } = props; 
     const [Ads, setAds] = useState(true)
     const [cancel, setCancel] = useState(false)
+    const [adRecords, setAdRecords] = useState([])
+
+    const DATA = [
+        {
+          id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+          title: 'First Item',
+        },
+        {
+          id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+          title: 'Second Item',
+        },
+        {
+          id: '58694a0f-3da1-471f-bd96-145571e29d72',
+          title: 'Third Item',
+        },
+        {
+            id: '58694a0f-3da1-471f-bd96-145571e2',
+            title: 'Third Item',
+        },
+        {
+            id: '58694a0f-3da1-471f--145571e2',
+            title: 'Third Item',
+        },
+        {
+            id: '58694a0f-3da1--bd96-145571e2',
+            title: 'Third Item',
+        },
+        {
+            id: '58694a0f-471f-bd96-145571e2',
+            title: 'Third Item',
+        },
+      ];
     key = 1
     state = 2
+
+    // useEffect(() =>{
+    //     let adsList = props.getAddDetails();
+    //     console.log("Ad list"+JSON.stringify(adsList))
+    //     setAdRecords([adsList])
+    //     console.log("Ads Records" + adRecords)
+    // })
     const addsChange = () => {
         setAds(true)
 
@@ -77,6 +119,24 @@ const adScreen = ({ navigation }) => {
         }
     }
 
+    const renderItem = ({adRecord})=>{
+        console.log("Ad Records"+JSON.stringify(adRecord))
+        if(adRecord.ad_status === "active"){
+            return(
+                <TouchableOpacity onPress={() => navigation.navigate('AddDescriptions')}>
+                          <AddDiscription
+                            ImageUrl={adRecord.ad_image_url}
+                            date= {adRecord.expiredMessage}
+                            ticket={adRecord.coupons_count + " coupons"}
+                            Views={ adRecord.views+" views"}
+                      />
+                </TouchableOpacity>
+            );
+        }
+        
+    }
+
+
     const homeScreen = () => {
         switch (state) {
             case 1:
@@ -110,64 +170,56 @@ const adScreen = ({ navigation }) => {
                 return (
                     <View>
 
-
-                        <View >
-
-                            <View style={styles.alertBanner}>
-                                {cancelAlert()}
-                            </View>
-                            <ScrollView
-                                showsVerticalScrollIndicator={false}
-                                scrollEventThrottle={16}
-                                style={styles.scrollStyle}
-                            >
-                                <View >
-                                    <TouchableOpacity onPress={() => navigation.navigate('AddDescriptions')}>
-                                        <AddDiscription
-                                            Image={require('../../assets/plans/veg.jpg')}
-                                            date="Expires in 100 days"
-                                            ticket="300 coupons"
-                                            Views="1000 views"
-                                        />
-                                    </TouchableOpacity>
-                                </View>
-                                <View>
-                                    <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                        <BannerDiscription
-                                            offerContainer={styles.offerContainer}
-                                            offer="Upto 20% Off"
-                                            state="Under Review"
-                                            statusColor={styles.statusText}
-                                            DateRequested="27 Oct, 2021"
-                                        />
-                                    </TouchableOpacity>
-                                </View>
-
-                                <View>
-                                    <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                        <BannerDiscription
-                                            offerContainer={styles.offerContainerPurple}
-                                            offer="Upto 20% Off"
-                                            state="Under Review"
-                                            statusColor={styles.statusTextPurple}
-                                            DateRequested="27 Oct, 2021"
-                                        />
-                                    </TouchableOpacity>
-                                </View>
-                                <View>
-                                    <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                        <BannerDiscription
-                                            offerContainer={styles.offerContainerGreen}
-                                            offer="Upto 20% Off"
-                                            state="Under Review"
-                                            statusColor={styles.statusTextPurple}
-                                            DateRequested="27 Oct, 2021"
-                                        />
-                                    </TouchableOpacity>
-                                </View>
-                            </ScrollView>
-                        </View>
+                    <View style={styles.alertBanner}>
+                        {cancelAlert()}
                     </View>
+                    <ScrollView
+                        showsVerticalScrollIndicator={false}
+                        scrollEventThrottle={16}>
+                        <View style={styles.addDiscription}>
+                            <TouchableOpacity onPress={() => navigation.navigate('AddDescriptions')}>
+                                <AddDiscription
+                                    ImageUrl = "https://firebasestorage.googleapis.com/v0/b/fir-admin-6c81d.appspot.com/o/asr%2Fads%2FPhQeg3ZXyShajyqGa2Rb%2Fcover?alt=media&token=84cf7cbd-5d62-4355-b167-edf99b07e496"
+                                    date="27 Oct, 2021"
+                                    ticket="300 coupons"
+                                    Views="1000 views"
+                                />
+                            </TouchableOpacity>
+                        </View>
+
+                        <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
+                            <BannerDiscription
+                                offerContainer={styles.offerContainer}
+                                offer="Upto 20% Off"
+                                state="Under Review"
+                                statusColor={styles.statusText}
+                                DateRequested="27 Oct, 2021"
+                            />
+                        </TouchableOpacity>
+                        <View>
+                            <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
+                                <BannerDiscription
+                                    offerContainer={styles.offerContainerPurple}
+                                    offer="Upto 20% Off"
+                                    state="Under Review"
+                                    statusColor={styles.statusTextPurple}
+                                    DateRequested="27 Oct, 2021"
+                                />
+                            </TouchableOpacity>
+                        </View>
+                        <View>
+                            <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
+                                <BannerDiscription
+                                    offerContainer={styles.offerContainerGreen}
+                                    offer="Upto 20% Off"
+                                    state="Under Review"
+                                    statusColor={styles.statusTextPurple}
+                                    DateRequested="27 Oct, 2021"
+                                />
+                            </TouchableOpacity>
+                        </View>
+                    </ScrollView>
+                </View>
                 )
                 break;
         }
@@ -198,15 +250,29 @@ const adScreen = ({ navigation }) => {
                     color: '#A5A5A5',
                     fontWeight: '700',
                     textAlign: 'center'
-                }}
+                }}     
 
                 dues={duesChange}
             />
+            <View style={styles.alertBanner}>
+                {cancelAlert()}
+            </View>
+            {/* <FlatList
+                data = {adRecords}
+                renderItem = {renderItem}
+                keyExtractor = {(adRecord) => adRecord.ad_id}
+            /> */}
             {homeScreen()}
         </View>
     )
 }
 
-export default adScreen
+const mapDispatchToProps =(dispatch)=>{
+    return{
+        getAddDetails:() => dispatch(getAddDetails())
+    }
+}
+
+export default connect(null,mapDispatchToProps)(adScreen);
 
 

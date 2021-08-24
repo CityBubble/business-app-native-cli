@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect , useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import RegisterNavigationStack from "./RegisterNavigationStack"
 import MainNavigationStack from "./MainNavigationStack"
@@ -12,14 +12,19 @@ import {initialiseState} from '../redux/actions/StorageActions';
 
 const Routes = (props) => {
 
-    let isOnboardingCompleted;
+    const [isOnboardingCompleted , setIsOnboardingCompleted] = useState(null)
     useEffect(async() =>{
-        isOnboardingCompleted = await props.initialiseState();
+        let stateValue = await props.initialiseState();
+        if(stateValue === "false"){
+            setIsOnboardingCompleted(false)
+        } else{
+            setIsOnboardingCompleted(true)
+        }
     })
 
     return(
-        <NavigationContainer independent={true}>
-            {isOnboardingCompleted ? <MainNavigationStack/> : <RegisterNavigationStack />}
+        <NavigationContainer independent={false}>
+            {(isOnboardingCompleted) ? <MainNavigationStack/> : <RegisterNavigationStack />}
         </NavigationContainer>
     )
 }

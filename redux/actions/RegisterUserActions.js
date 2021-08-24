@@ -1,4 +1,4 @@
-import {REGISTER_APP_CHANGE , UPLOAD_USER_IMAGE , QUERY_VENDOR_NUMBER , VENDOR_COLLECTION , QUERY_VENDOR_PROFILE_STATUS} from '../ReduxConstants'
+import {REGISTER_APP_CHANGE , UPLOAD_USER_IMAGE , QUERY_VENDOR_NUMBER , VENDOR_COLLECTION , QUERY_VENDOR_PROFILE_STATUS , CITIES_COLLECTION , CITY_CODES_MAP} from '../ReduxConstants'
 import firestore from "@react-native-firebase/firestore"
 
 /**
@@ -16,8 +16,7 @@ export  const registerUser =  inputUserDetailsObject => async dispatch =>{
             .add({
                 name:inputUserDetailsObject.BusinessName ,
                 contact : inputUserDetailsObject.PhoneNumber,
-                category : inputUserDetailsObject.BusinessCategory,
-                labels : inputUserDetailsObject.BusinessSubCategory ,
+                category : inputUserDetailsObject.BusinessSubCategory ,
                 profile_status : "queued"
             });
         let documentId = documentResponse.id;
@@ -84,11 +83,14 @@ export  function addUserImage(imageUri,docId){
  * @param {} phoneNumber 
  * @returns 
  */
- export  function checkIfPhoneNumberExistsInFirestore(phoneNumber){
+ export  function checkIfPhoneNumberExistsInFirestore(phoneNumber,city){
     return(dispatch)=>{
         return new Promise((resolve,reject) =>{
             console.log("phone number" + phoneNumber.toString())
+            console.log("City Code"+CITY_CODES_MAP[city])
             firestore()
+                .collection(CITIES_COLLECTION)
+                .doc(CITY_CODES_MAP[city])
                 .collection(VENDOR_COLLECTION)
                 .where("contact", "==", phoneNumber.toString())
                 .get()

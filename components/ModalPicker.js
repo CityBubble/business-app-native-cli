@@ -3,7 +3,7 @@ import { Dimensions } from 'react-native';
 import { Text, View, TouchableOpacity, ScrollView } from 'react-native'
 import modalPickerStyles from '../styles/componentStyles/ModalPicker'
 
-const OPTIONS = ['Amritsar', 'Coming to your city soon...']
+const OPTIONS = ['Amritsar','Chandigarh']
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 
@@ -19,8 +19,7 @@ const ModalPicker = (props) => {
             <TouchableOpacity
                 style={modalPickerStyles.option}
                 key={index}
-                onPress={() => onPressItem(item)}
-            >
+                onPress={() => onPressItem(item)}>
                 <Text style={modalPickerStyles.text}>
                     {item}
                 </Text>
@@ -31,8 +30,7 @@ const ModalPicker = (props) => {
     return (
         <TouchableOpacity
             onPress={() => props.chooseModalVisibility(false)}
-            style={modalPickerStyles.modalPickerContainer}
-        >
+            style={modalPickerStyles.modalPickerContainer}>
             <View style={[modalPickerStyles.modal, { width: WIDTH - 30, height: HEIGHT / 6 }]}>
                 <ScrollView>
                     {option}

@@ -1,35 +1,45 @@
 import React from 'react'
 import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useState } from 'react'
-import PhoneInput from 'react-native-phone-number-input'
 import { TouchableWithoutFeedback } from 'react-native'
 import { Keyboard } from 'react-native'
-import Button from '../components/Button'
-import loginStyles from '../styles/Login'
-
+import Button from '../../components/Button'
+import loginStyles from '../../styles/Login'
+import {connect} from 'react-redux';
+import {checkIfPhoneNumberExistsInFirestore} from '../../redux/actions/RegisterUserActions';
 /**
  * Login screen where user is asked to register by mobile number
  */
-const MobileLoginScreen = ({ navigation }) => {
+const MobileLoginScreen = (props) => {
 
+    const {navigation , route} = props
     const [phonenumber, setphonenumber] = useState('')
-    const [formattedValue, setFormattedValue] = useState('')
-
-    const onPressButton = () => {
-        if (phonenumber && phonenumber.length > 9) {
-            navigation.navigate('Otp', { phonenumber })
+    const [errorExist , setErrorExist] = useState('')
+    const submitRegisteredUser = async()=>{
+        try{
+            if (phonenumber && phonenumber.length > 9) {
+                let response = await props.checkIfPhoneNumberExistsInFirestore(phonenumber,route.params.choosecity);
+                console.log("Response is"+response)
+                if(response === true){
+                    setErrorExist('Given Phone Does Exists in the database , Please try with another number!')
+                } else {
+                    navigation.navigate('TabNavigation',{...route.params})
+                }
+            }  else {
+                Alert.alert(
+                    "Invalid entry",
+                    "Fill a valid number",
+                    [{
+                        text: 'Cancel',
+                        style: 'cancel'
+                    }]
+                )
+            }
+            
+        } catch(err){
+            console.error("Error is"+err);
+            Alert.alert(err);
         }
-        else {
-            Alert.alert(
-                "Invalid entry",
-                "Fill a valid number",
-                [{
-                    text: 'Cancel',
-                    style: 'cancel'
-                }]
-            )
-        }
-
     }
 
     return (
@@ -41,6 +51,7 @@ const MobileLoginScreen = ({ navigation }) => {
                 </View>
                 <View style={loginStyles.loginInput}>
                     <Text style={loginStyles.loginTextInput} >Please provide us your mobile number</Text>
+                    <Text style={{ fontSize: 12, color: '#FF0D10' }}>{errorExist ? errorExist : null}</Text>
                     <View style={loginStyles.inputContainer}>
                         <View style={loginStyles.openDialogView}>
                             <Text style={loginStyles.Code}>{"+91"}</Text>
@@ -51,11 +62,9 @@ const MobileLoginScreen = ({ navigation }) => {
                             keyboardType="number-pad"
                             value={phonenumber}
                             onChangeText={setphonenumber}
-                            secureTextEntry={false}
-
-                        />
+                            secureTextEntry={false}/>
                     </View>
-                    <Button title="Login" onPress={onPressButton} />
+                    <Button title="Login" onPress={submitRegisteredUser} />
                     <View style={loginStyles.RegisterContainer}>
                         <View style={loginStyles.registerQuestion}>
                             <Text style={loginStyles.TextQuestion}>New to the Bubble? </Text>
@@ -71,4 +80,9 @@ const MobileLoginScreen = ({ navigation }) => {
     )
 }
 
-export default MobileLoginScreen
+const mapDispatchToProps =(dispatch)=>{
+    return{
+        checkIfPhoneNumberExistsInFirestore:(phonenumber,city) => dispatch(checkIfPhoneNumberExistsInFirestore(phonenumber,city))
+    }
+}
+export default connect(null,mapDispatchToProps)(MobileLoginScreen)

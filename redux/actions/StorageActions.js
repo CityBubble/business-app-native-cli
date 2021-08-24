@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import {DOCUMENT_ID_KEY, IS_VENDOR_ONBOARDING_COMPLETED_KEY , VENDOR_DETAILS_KEY , 
-    INITIALISE_STATE , ADD_UPDATE_VENDOR_DETAILS_STATE} from  '../ReduxConstants'
+import { IS_VENDOR_ONBOARDING_COMPLETED_KEY , VENDOR_DETAILS_KEY , 
+    INITIALISE_STATE , ADD_UPDATE_VENDOR_DETAILS_STATE } from  '../ReduxConstants'
 
 
 const FALSE_PARAM = false;
@@ -14,10 +14,10 @@ const TRUE_PARAM = true;
  */
 export const initialiseState = () => async dispatch =>{
     try{
-        let isOnboardingCompleted = await JSON.parse(await AsyncStorage.getItem(IS_VENDOR_ONBOARDING_COMPLETED_KEY))
+        let isOnboardingCompleted = await AsyncStorage.getItem(IS_VENDOR_ONBOARDING_COMPLETED_KEY)
         if (isOnboardingCompleted == null){
-            await AsyncStorage.setItem(IS_VENDOR_ONBOARDING_COMPLETED_KEY,FALSE_PARAM.toString());
             isOnboardingCompleted = FALSE_PARAM.toString()
+            await AsyncStorage.setItem(IS_VENDOR_ONBOARDING_COMPLETED_KEY,isOnboardingCompleted);
         } 
         dispatch({
             type : INITIALISE_STATE,
@@ -39,7 +39,7 @@ export const addVendorDetails = vendorDetailsObject => async dispatch =>{
     try{
         console.log("Vendor Detials" + JSON.stringify(vendorDetailsObject));
         await AsyncStorage.setItem(IS_VENDOR_ONBOARDING_COMPLETED_KEY,TRUE_PARAM.toString());
-        await AsyncStorage.setItem(VENDOR_MOBILE_NUMBER_KEY, JSON.stringify(vendorDetailsObject));
+        await AsyncStorage.setItem(VENDOR_DETAILS_KEY, JSON.stringify(vendorDetailsObject));
         documentId = vendorDetailsObject.documentId;
         dispatch({
             type : ADD_UPDATE_VENDOR_DETAILS_STATE,

@@ -1,25 +1,13 @@
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native'
-import {  Text, View, Image, KeyboardAvoidingView , TextInput , TouchableOpacity } from 'react-native'
-import Picker from 'react-native-picker'
+import {  Text, View, Image, KeyboardAvoidingView , TextInput } from 'react-native'
 import { Card } from 'react-native-shadow-cards'
-import InputBox from '../components/Inputbox'
-import Registerstyles from '../styles/Register'
-import { Dropdown, MultiSelect } from 'react-native-element-dropdown'
-import Button from '../components/Button'
-import styles from '../styles/componentStyles/InputBox'
+import Registerstyles from '../../styles/Register'
+import Button from '../../components/Button'
+import styles from '../../styles/componentStyles/InputBox'
 import { Formik } from 'formik'
 import * as yup from 'yup';
-import {connect} from 'react-redux';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {addorUpdateVendorMobileNumber} from '../redux/actions/StorageActions';
-
-const data = [
-    { label: 'Fashion', value: '1' },
-    { label: 'Food', value: '2' },
-    { label: 'Electronics', value: '3' },
-    { label: 'Health', value: '4' }
-]
 
 
 const Register = (props) => {
@@ -32,26 +20,22 @@ const Register = (props) => {
     const [openBusinessSubCategory, setOpenBusinessSubCategory] = useState(false);
     const [BusinessSubCategory, setbusinessSubCategory] = useState([]);
     const [items, setItems] = useState([
-        {label: 'Apple', value: 'apple'},
-        {label: 'Banana', value: 'banana'},
-        {label: 'Apple1', value: 'apple1'},
-        {label: 'Banana1', value: 'banana2'},
-        {label: 'Apple2', value: 'apple3'},
-        {label: 'Banana2', value: 'banana4'},
-        {label: 'Apple3', value: 'apple5'},
-        {label: 'Banana3', value: 'banana6'}
+        {label: 'Fashion', value: 'Fashion'},
+        {label: 'Health', value: 'Health'},
     ]);
 
-    const [items1, setItems1] = useState([
-        {label: 'Apple', value: 'apple'},
-        {label: 'Banana', value: 'banana'},
-        {label: 'Apple1', value: 'apple1'},
-        {label: 'Banana1', value: 'banana2'},
-        {label: 'Apple2', value: 'apple3'},
-        {label: 'Banana2', value: 'banana4'},
-        {label: 'Apple3', value: 'apple5'},
-        {label: 'Banana3', value: 'banana6'}
-    ]);
+    const [items1, setItems1] = useState([]);
+
+    const itemsMap = {
+        'Fashion' : [ 
+            {label: 'Styles', value: 'styles'},
+            {label: 'Footwear', value: 'footwear'}
+        ],
+        'Health' : [
+            {label: 'Gym', value: 'gym'},
+            {label: 'Saloon', value: 'saloon'}
+        ]
+    }
 
     return (
         <KeyboardAvoidingView
@@ -62,7 +46,7 @@ const Register = (props) => {
                     <SafeAreaView>
                             <View style={Registerstyles.registerContainer}>
                             <View style={Registerstyles.registerLogo} >
-                                <Image source={require('../assets/Logo/Logo.png')} />
+                                <Image source={require('../../assets/Logo/Logo.png')} />
                             </View>
                             <View style={Registerstyles.registerTextContainer}>
                                 <Text style={Registerstyles.registerText} >Good to see you in the bubble</Text>
@@ -94,7 +78,7 @@ const Register = (props) => {
                                                 }
                                             <Card style={Registerstyles.Cards}>
                                                 <View style={Registerstyles.registerTextImage} >
-                                                    <Image source={require(`../assets/Form/Bussiness.png`)} style={Registerstyles.Icon} />
+                                                    <Image source={require(`../../assets/Form/Bussiness.png`)} style={Registerstyles.Icon} />
                                                     <View style={styles.inputboxContainer}>
                                                         <TextInput
                                                             placeholder="Business Name"
@@ -109,11 +93,12 @@ const Register = (props) => {
                                                 </View>
                                             </Card>
                                         </View>
-
                                         <View style={Registerstyles.inputContainerSecondary}>
                                             <Text style={Registerstyles.registerLabel}>Nature of business</Text>
                                             <View style={Registerstyles.registerTextImage}>
                                                 <DropDownPicker
+                                                    zIndex={3000}
+                                                    zIndexInverse={1000}
                                                     open={openBusinessCategory}
                                                     value={BusinessCategory}
                                                     items={items}
@@ -121,18 +106,24 @@ const Register = (props) => {
                                                     containerStyle={{height: 40, marginTop: 10, width : 350 , marginRight : 40}}
                                                     setValue={setbusinessCategory}
                                                     setItems={setItems}
+                                                    onChangeValue = {()=> {
+                                                        console.log(JSON.stringify(itemsMap[BusinessCategory]))
+                                                        setbusinessSubCategory([])
+                                                        setOpenBusinessSubCategory(false)
+                                                        setItems1(itemsMap[BusinessCategory])}}
                                                     dropDownDirection="Bottom"
                                                     placeholder='Select your Business Category'
                                                     onFocus = {()=>setenableshift(true)}
                                                 />
                                             </View>
                                         </View>
-
                                         <View style={Registerstyles.inputContainerSecondary}>
                                             <Text style={Registerstyles.registerLabel}>Business SubCategory</Text>
                                             <View style={Registerstyles.registerTextImage}>
                                                 <DropDownPicker
                                                     multiple = {true}
+                                                    zIndex={2000}
+                                                    zIndexInverse={2000}
                                                     open={openBusinessSubCategory}
                                                     value={BusinessSubCategory}
                                                     items={items1}

@@ -3,10 +3,8 @@ import { TouchableOpacity } from 'react-native'
 import { KeyboardAvoidingView } from 'react-native'
 import { Text, View } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
-import { Image } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import otpStyles from '../../styles/Otp'
-import styles from '../../styles/componentStyles/InputBox'
 
 const Otp = ({ route, navigation }) => {
 
@@ -19,13 +17,8 @@ const Otp = ({ route, navigation }) => {
     const [countdown, setcountdown] = useState(defaultCountdown)
     const [enableResend, setEnableResend] = useState(false)
     const [wrongOtp, setWrongotp] = useState(false)
-
-    let data = route.params
-    let number = data.phonenumber
-    let phonenumber = { phonenumber: number }
     const onChangeText = (val) => {
         setOtpVal(val)
-        // setOtpVal((OtpVal) => val);
         if (val.length === lengthInput && val === Otp) {
             navigation.replace('waitingScreen')
 

@@ -4,7 +4,8 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 const styles = StyleSheet.create({
     adContainer: {
         flex: 1,
-        backgroundColor: '#14161d'
+        backgroundColor: '#14161d',
+        paddingBottom : 10
     },
     alertBanner: {
         padding: wp('2%'),

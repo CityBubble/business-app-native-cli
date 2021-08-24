@@ -2,8 +2,8 @@ import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
-import waitingScreen from '../screens/waitingScreen';
-import waitingScreen from '../screens/waitingScreen';
+import waitingScreen from '../screens/RegisterVendorScreens/WaitingScreen';
+import UnderProcessScreen from '../screens/RegisterVendorScreens/UnderProcessScreen';
 import GlobalStyles from '../components/GlobalStyles'
 import Tabnavigator from './TabNavigation';
 import Profile from '../screens/ProfileScreen';
@@ -25,7 +25,8 @@ export default function MainNavigationStack() {
     <SafeAreaView style={GlobalStyles.droidSafeArea}>
       <StatusBar style="light" />
       <NavigationContainer  independent ={true}>
-        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Tabnavigator} >
+        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"TabNavigation"} >
+          <Stack.Screen name= "underProcessScreen" component={UnderProcessScreen}/>
           <Stack.Screen name="waitingScreen" component={waitingScreen} />
           <Stack.Screen name="TabNavigation" component={Tabnavigator} />
           <Stack.Screen name="ProfileScreen" component={Profile} />
