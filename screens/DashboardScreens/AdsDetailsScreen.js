@@ -54,12 +54,12 @@ const adScreen = (props) => {
     key = 1
     state = 2
 
-    // useEffect(() =>{
-    //     let adsList = props.getAddDetails();
+    // useEffect(async () =>{
+    //     let adsList = await props.getAddDetails();
     //     console.log("Ad list"+JSON.stringify(adsList))
     //     setAdRecords([adsList])
-    //     console.log("Ads Records" + adRecords)
-    // })
+    //     console.log("Ads Records" + adsList)
+    // },[adRecords])
     const addsChange = () => {
         setAds(true)
 
@@ -127,7 +127,7 @@ const adScreen = (props) => {
     }
 
     const renderItem = ({item})=>{
-        console.log("Ad Records"+JSON.stringify(item))
+        console.log("Ad Records value"+JSON.stringify(item))
         if(item.ad_status === "active"){
             return(
                 <TouchableOpacity onPress={() => navigation.navigate('AddDescriptions')}>
@@ -267,7 +267,7 @@ const adScreen = (props) => {
             <FlatList
                 data = {DATA}
                 renderItem = {renderItem}
-                keyExtractor = {(item) => item.id}
+                keyExtractor = {(item) =>{item.id}}
             />
             {/* {homeScreen()} */}
         </View>

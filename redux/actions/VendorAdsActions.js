@@ -22,7 +22,7 @@ import moment from 'moment';
                         if(documentData.ad_status.status != "expired"){
                             if( documentData.ad_status.status === "active"){
                                 let adDetails = {
-                                    "ad_id" : documentData.uid,
+                                    "id" : documentData.uid,
                                     "ad_status" : documentData.ad_status.status,
                                     "coupons_count" : documentData.stats.claims,
                                     "ad_image_url" : documentData.processed.img_url,
@@ -32,7 +32,7 @@ import moment from 'moment';
                                 adRecords.push(adDetails)
                             } else{
                                 let adDetails = {
-                                    "ad_id" : documentData.uid,
+                                    "id" : documentData.uid,
                                     "ad_status" : documentData.ad_status.status,
                                     "tagline" : documentData.raw.tagline,
                                     "requestedDate" : convertTimeStampToStandardDate(documentData.timeline.request_date)  
