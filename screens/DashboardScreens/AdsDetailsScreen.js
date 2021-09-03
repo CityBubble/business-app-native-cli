@@ -134,7 +134,7 @@ const adScreen = (props) => {
                     <AddDiscription
                         ImageUrl = "https://firebasestorage.googleapis.com/v0/b/fir-admin-6c81d.appspot.com/o/asr%2Fads%2FPhQeg3ZXyShajyqGa2Rb%2Fcover?alt=media&token=84cf7cbd-5d62-4355-b167-edf99b07e496"
                         date="27 Oct, 2021"
-                        ticket="300 coupons"
+                        ticket="302 coupons"
                         Views="1000 views"
                     />
                 </TouchableOpacity>
@@ -188,42 +188,12 @@ const adScreen = (props) => {
                                 <AddDiscription
                                     ImageUrl = "https://firebasestorage.googleapis.com/v0/b/fir-admin-6c81d.appspot.com/o/asr%2Fads%2FPhQeg3ZXyShajyqGa2Rb%2Fcover?alt=media&token=84cf7cbd-5d62-4355-b167-edf99b07e496"
                                     date="27 Oct, 2021"
-                                    ticket="300 coupons"
+                                    ticket="301 coupons"
                                     Views="1000 views"
                                 />
                             </TouchableOpacity>
-                        </View>
 
-                        <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                            <BannerDiscription
-                                offerContainer={styles.offerContainer}
-                                offer="Upto 20% Off"
-                                state="Under Review"
-                                statusColor={styles.statusText}
-                                DateRequested="27 Oct, 2021"
-                            />
-                        </TouchableOpacity>
-                        <View>
-                            <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                <BannerDiscription
-                                    offerContainer={styles.offerContainerPurple}
-                                    offer="Upto 20% Off"
-                                    state="Under Review"
-                                    statusColor={styles.statusTextPurple}
-                                    DateRequested="27 Oct, 2021"
-                                />
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <TouchableOpacity onPress={() => { navigation.navigate('PlanDescriptions') }}>
-                                <BannerDiscription
-                                    offerContainer={styles.offerContainerGreen}
-                                    offer="Upto 20% Off"
-                                    state="Under Review"
-                                    statusColor={styles.statusTextPurple}
-                                    DateRequested="27 Oct, 2021"
-                                />
-                            </TouchableOpacity>
+
                         </View>
                     </ScrollView>
                 </View>
