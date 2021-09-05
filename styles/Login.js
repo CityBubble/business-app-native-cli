@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         marginHorizontal:wp('3.5%')
     },
     loginInput:{
-        marginTop:hp('15%'),
+        marginTop:hp('10%'),
         justifyContent:'center',
         alignItems:'center'
     },

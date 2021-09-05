@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         // flex: 1,
         backgroundColor: '#292930',
         width: wp('92%'),
-        height: hp('80%'),
+        height: hp('35%'),
         borderRadius: 20
     },
     durationHeading: {
@@ -83,15 +83,19 @@ const styles = StyleSheet.create({
         left:wp('6%')
     },
     GalleryStyles: {
-        top: hp('4%')
+        backgroundColor: '#292930',
+        top: hp('4.35%')
     },
     ImageContainer: {
         margin: wp('2.6%')
     },
     termStyle: {
-        top: hp('4%')
+        backgroundColor: '#292930',
+        top: hp('5.5%')
     },
     TermContainer: {
+        backgroundColor: '#292930',
+
         flexDirection: 'row',
         padding: wp('1%'),
         alignItems: 'center'
