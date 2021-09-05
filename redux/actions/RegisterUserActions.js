@@ -114,10 +114,12 @@ export  function addUserImage(imageUri,docId){
  * @param {*} phoneNumber 
  * @returns 
  */
- export  function getReviewStateOfVendor(documentId){
+ export  function getReviewStateOfVendor(city,documentId){
     return(dispatch)=>{
         return new Promise((resolve,reject) =>{
             firestore()
+                .collection(CITIES_COLLECTION)
+                .doc(CITY_CODES_MAP[city])
                 .collection(VENDOR_COLLECTION)
                 .doc(documentId)
                 .get()
