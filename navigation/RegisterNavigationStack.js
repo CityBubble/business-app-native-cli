@@ -18,6 +18,7 @@ import ElitePlansData from '../screens/PlanData/elitePlans';
 import BasicPlansData from '../screens/PlanData/basicPlans';
 import AddDescriptions from '../screens/AddDescriptions';
 import Descriptions from '../screens/Descriptions';
+// Updating the Navigation Stack
 import Tabnavigator from './TabNavigation';
 import Profile from '../screens/ProfileScreen';
 import AddressScreen from '../screens/forms/AddressScreen';

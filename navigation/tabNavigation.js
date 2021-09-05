@@ -15,6 +15,7 @@ import PlanScreen from '../screens/PlansScreen';
 import ElitePlans from '../screens/elitePlanScreen';
 import BasicPlans from '../screens/basicPlanScreen';
 import unSubscribedScreen from '../screens/unsubscribedScreen';
+// Updating the navigator
 
 const Tab = createBottomTabNavigator()
 const DashboardStack = createStackNavigator()
