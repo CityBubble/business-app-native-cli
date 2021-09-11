@@ -15,9 +15,10 @@ const styles = StyleSheet.create({
         alignItems:'center'
     },
     loginHeading:{
+        
         color:"#fff",
         fontSize:hp('4%'),
-        fontWeight:'800',
+        fontWeight:'500',
         padding:5
     },
     loginHeadingSecondary:{
@@ -35,21 +36,33 @@ const styles = StyleSheet.create({
        flexDirection:'row',
        alignItems:'center',
        padding:wp('1%'),
-       backgroundColor:'#fff',
+       backgroundColor:'#14161d',
        width:wp('68%'),
        height:hp('7%'),
-       borderRadius:6
+       borderRadius:10,
+
+       shadowColor: "#fff",
+       shadowOffset: {
+	        width: 50,
+	        height: 100,
+    },
+        shadowOpacity: 1.0,
+        shadowRadius: 50,
+        elevation: 50,
    },
    openDialogView:{
+       borderTopLeftRadius:10,
+       borderBottomLeftRadius:10,
        flexDirection:'row',
        alignItems:'center',
        justifyContent:'center',
-      height:hp('6.8%'),
+      height:hp('7%'),
        padding:wp('2%'),
-       right:hp('.4%'),
-       backgroundColor:'#A5A5A5'
+       right:hp('1%'),
+       backgroundColor:'#A5A5A5',
    },
    phoneInputStyle:{
+       color: '#fff',
        marginLeft:wp('2%'),
        flex:1,
        height:hp('7%'),
@@ -70,7 +83,7 @@ const styles = StyleSheet.create({
        fontWeight:'700'
     },
     btnStyles:{
-       color:'#32CD30',
+        color:'#32CD30',
         fontSize:hp('2.1%'),
         fontWeight:'700'
 

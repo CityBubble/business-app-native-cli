@@ -50,7 +50,7 @@ const MobileLoginScreen = (props) => {
                     <Text style={loginStyles.loginHeadingSecondary}>We are glad to see you in City Bubble!  </Text>
                 </View>
                 <View style={loginStyles.loginInput}>
-                    <Text style={loginStyles.loginTextInput} >Please provide us your mobile number</Text>
+                    <Text style={loginStyles.loginTextInput}>Please provide us your mobile number</Text>
                     <Text style={{ fontSize: 12, color: '#FF0D10' }}>{errorExist ? errorExist : null}</Text>
                     <View style={loginStyles.inputContainer}>
                         <View style={loginStyles.openDialogView}>
@@ -58,7 +58,8 @@ const MobileLoginScreen = (props) => {
                         </View>
                         <TextInput
                             style={loginStyles.phoneInputStyle}
-                            placeholder="Mobile Number"
+                            placeholder="Enter 10-digit number"
+                            placeholderTextColor= '#fff'
                             keyboardType="number-pad"
                             value={phonenumber}
                             onChangeText={setphonenumber}

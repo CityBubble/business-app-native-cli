@@ -4,7 +4,8 @@ const styles = StyleSheet.create({
     inputboxContainer: {
         width: 300,
         minHeight: 30,
-        height: 50
+        height: 50,
+        
     },
     Input: {
         color: '#fff',
@@ -53,8 +54,12 @@ const styles = StyleSheet.create({
     },
     placeholderStyle:{
         color:'#A5A5A5',
-    fontSize:hp('2%')
-    }
+        fontSize:hp('2%')
+    },
+
+    
+
+    
 
 
 })
