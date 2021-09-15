@@ -1,26 +1,33 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Image, Dimensions, ScrollView, TouchableOpacity, Modal } from 'react-native'
+import { StyleSheet, Text, View, Image, Dimensions, ScrollView, Modal,TouchableOpacity } from 'react-native'
 import DiscriptionCard from '../components/adsComponent/discriptionCard'
 import StopModal from '../components/warning/StopModal'
 import RenewModal from '../components/warning/RenewModal'
 import styles from '../styles/AddDescriptionStyle'
 
-const AddDescriptions = ({ navigation }) => {
+
+const AddDescriptions = ({route, navigation }) => {
     const [show, setShow] = useState(false)
     const [refreshShow, setRefreshShow] = useState(false)
+   const adObj = route.params.adItem;
+  
     return (
         <View style={styles.DescriptionContainer}>
-            <ScrollView>
+            <ScrollView
+            showsVerticalScrollIndicator={false}
+            scrollEventThrottle={16}>
 
                 <View style={styles.BannerImage}>
                     <Image source={require('../assets/plans/veg.jpg')} style={styles.image} />
                 </View>
                 <View style={styles.headerStyle}>
-                    <TouchableOpacity onPress={() => navigation.goBack('Home')}>
+                   
                         <View style={styles.BackIcon}>
+                        <TouchableOpacity onPress={() => navigation.goBack('Home')}>
                             <Image source={require('../assets/Image/back.png')} style={{ width: 20, height: 20 }} />
+                            </TouchableOpacity>
                         </View>
-                    </TouchableOpacity>
+                    
                     <View style={styles.offer}>
                         <Text style={styles.textWhite}>Flat</Text>
                         <Text style={styles.textGreen}>20%</Text>
@@ -29,13 +36,14 @@ const AddDescriptions = ({ navigation }) => {
                 </View>
                 <View style={styles.DiscriptionCard}>
                     <DiscriptionCard
-                        Date="21 Sept,2021"
-                        ValidDate="21 Oct,2021"
-                        Coupons="300"
-                        Views="1000"
+                        Date={adObj.launch}
+                        ValidDate={adObj.expiry}
+                        Coupons={adObj.coupones}
+                        Views={adObj.views}
                     />
+                    
                 </View>
-            </ScrollView>
+                </ScrollView>
 
             <StopModal
                 Visible={show}
@@ -57,6 +65,7 @@ const AddDescriptions = ({ navigation }) => {
 
                 </TouchableOpacity>
             </View>
+            
         </View>
     )
 }

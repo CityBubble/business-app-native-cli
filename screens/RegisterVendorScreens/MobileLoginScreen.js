@@ -1,5 +1,5 @@
 import React from 'react'
-import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Alert, Text, TextInput, TouchableOpacity, View,ActivityIndicator } from 'react-native'
 import { useState } from 'react'
 import { TouchableWithoutFeedback } from 'react-native'
 import { Keyboard } from 'react-native'
@@ -12,6 +12,7 @@ import {checkIfPhoneNumberExistsInFirestore} from '../../redux/actions/RegisterU
  */
 const MobileLoginScreen = (props) => {
 
+    const[indicator, setIndicator]=useState(false)
     const {navigation , route} = props
     const [phonenumber, setphonenumber] = useState('')
     const [errorExist , setErrorExist] = useState('')
@@ -21,7 +22,7 @@ const MobileLoginScreen = (props) => {
                 let response = await props.checkIfPhoneNumberExistsInFirestore(phonenumber,route.params.choosecity);
                 console.log("Response is"+response)
                 if(response === true){
-                    setErrorExist('Given Phone Does Exists in the database , Please try with another number!')
+                    setErrorExist('Given Phone does not exist in the database , Please try with another number!')
                 } else {
                     navigation.navigate('TabNavigation',{...route.params})
                 }
@@ -65,7 +66,12 @@ const MobileLoginScreen = (props) => {
                             onChangeText={setphonenumber}
                             secureTextEntry={false}/>
                     </View>
-                    <Button title="Login" onPress={submitRegisteredUser} />
+                    <ActivityIndicator size ='large' color='green' animating ={indicator}/>
+                    <Button title="Login" 
+                    onPress={(submitRegisteredUser)}
+                    />
+                    
+
                     <View style={loginStyles.RegisterContainer}>
                         <View style={loginStyles.registerQuestion}>
                             <Text style={loginStyles.TextQuestion}>New to the Bubble? </Text>

@@ -56,7 +56,7 @@ const DiscriptionCard = (props) => {
 
                 <ScrollView
                     horizontal
-                    showsHorizontalScrollIndicator={false}
+                    showsHorizontalScrollIndicator={true}
                 >
                     <View style={styles.ImageContainer}>
                         <Image source={require('../../assets/test/testCase.png')} style={styles.imageStyles} />
@@ -78,22 +78,14 @@ const DiscriptionCard = (props) => {
                     <Text style={styles.HeadingStyle}>Terms and Conditions</Text>
                 </View>
                 <View style={styles.TextContainer}>
-                    <View style={styles.TermContainer}>
-                    <Feather name="check" size={hp('2.5%')} color="#afafaf" style={styles.Icon} />
-                        <Text style={styles.textStyles}>Lorem Ipsum is simply dummy text </Text>
-                    </View>
-                    <View style={styles.TermContainer}>
-                    <Feather name="check" size={hp('2.5%')} color="#afafaf" style={styles.Icon} />
-                        <Text style={styles.textStyles}>Lorem Ipsum is simply dummy text </Text>
-                    </View>
-                    <View style={styles.TermContainer}>
-                    <Feather name="check" size={hp('2.5%')} color="#afafaf" style={styles.Icon} />
-                        <Text style={styles.textStyles}>Lorem Ipsum is simply dummy text </Text>
-                    </View>
-                    <View style={styles.TermContainer}>
-                    <Feather name="check" size={hp('2.5%')} color="#afafaf" style={styles.Icon} />
-                        <Text style={styles.textStyles}>Lorem Ipsum is simply dummy text </Text>
-                    </View>
+                    {
+  <View style={styles.TermContainer}>
+  <Feather name="check" size={hp('2.5%')} color="#afafaf" style={styles.Icon} />
+      <Text style={styles.textStyles}>term </Text>
+  </View>
+                    }
+                  
+                   
                 </View>
             </View>
         </View>

@@ -4,10 +4,13 @@ import {  Text, View, Image, KeyboardAvoidingView , TextInput } from 'react-nati
 import { Card } from 'react-native-shadow-cards'
 import Registerstyles from '../../styles/Register'
 import Button from '../../components/Button'
+
 import styles from '../../styles/componentStyles/InputBox'
 import { Formik } from 'formik'
 import * as yup from 'yup';
 import DropDownPicker from 'react-native-dropdown-picker';
+
+import loginStyles from '../../styles/Login'
 
 
 const Register = (props) => {
@@ -145,7 +148,7 @@ const Register = (props) => {
                                                 onPress={handleSubmit} 
                                                 style={Registerstyles.registerButton}
                                         />
-                                    </View>
+                                        </View>
                                     </View>
                                     )}
                             </Formik>
@@ -157,3 +160,4 @@ const Register = (props) => {
 }
 
 export default Register
+

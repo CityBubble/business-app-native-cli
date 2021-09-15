@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import waitingScreen from '../screens/RegisterVendorScreens/WaitingScreen';
 import UnderProcessScreen from '../screens/RegisterVendorScreens/UnderProcessScreen';
 import GlobalStyles from '../components/GlobalStyles'
-import Tabnavigator from './TabNavigation';
+import Tabnavigator from '../navigation/tabNavigation';
 import Profile from '../screens/ProfileScreen';
 import AddressScreen from '../screens/forms/AddressScreen';
 import BasicInfoScreen from '../screens/forms/BasicInfoScreen';

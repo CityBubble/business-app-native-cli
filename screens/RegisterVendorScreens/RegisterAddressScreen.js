@@ -10,7 +10,7 @@ import styles from '../../styles/RegisterAddress'
 import InputBoxStyles from '../../styles/componentStyles/InputBox'
 import {connect} from 'react-redux';
 import { checkIfPhoneNumberExistsInFirestore} from '../../redux/actions/RegisterUserActions';
-
+import loginStyles from '../../styles/Login'
 
 const RegisterAddressScreen = (props) => {
 
