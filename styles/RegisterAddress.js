@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
 
       }, 
       inputContainerInput: {
-        marginTop: hp('3.2%')
+        marginTop: hp('2.2%'),
+        marginLeft: hp('3%')
       },
       Cards: {
           backgroundColor: '#000',
@@ -42,7 +43,11 @@ const styles = StyleSheet.create({
       Icon:{
         width:Platform.OS==='ios'?wp('6.5%'):wp('7.9%'), 
           height:Platform.OS==='ios'? hp('3.0%'):hp('4.2%') 
-      }
+      },
+      nextButtonSection: {
+        justifyContent: 'center',
+        alignItems: 'center'
+     }
 })
 
 

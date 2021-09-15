@@ -40,12 +40,12 @@ const LocationScreen = ({ navigation }) => {
         </View>
       </View>
       <View style={locationStyles.locationDropdownContainer}>
-        <Text style={locationStyles.locationTextSmall}>Tell us your city</Text>
+        <Text style={locationStyles.locationTextSmall}>In which city do you reside in</Text>
         <TouchableOpacity
           style={locationStyles.locationTouchable}
           onPress={() => chooseModalVisibility(true)}>
           <Image source={require('../../assets/Image/City.png')} />
-          <Text style={locationStyles.dropdownText}>{choosecity?choosecity:'Select City'}</Text>
+          <Text style={locationStyles.dropdownText}>{choosecity?choosecity:'City'}</Text>
         </TouchableOpacity>
         <Modal
           transparent={true}

@@ -164,9 +164,11 @@ const RegisterAddressScreen = (props) => {
                                           </Card>
                                     </View>
 
-                                    <Button 
-                                          title="Next" 
-                                          onPress={handleSubmit} />
+                                    <View style={registerAddressStyles.nextButtonSection}>
+                                          <Button 
+                                                title="Next" 
+                                                onPress={handleSubmit} />
+                                    </View>
                               </View>
                         )}
                   </Formik>

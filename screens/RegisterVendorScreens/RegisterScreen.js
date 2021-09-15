@@ -71,6 +71,7 @@ const Register = (props) => {
                                 })}>
                                 {({values,handleChange , errors, setFieldTouched , touched , isValid , handleSubmit}) =>(
                                     <View>
+                                        <View style={Registerstyles.bigViewContainer}>
                                         <View style={Registerstyles.inputContainerSecondary}>
                                             <Text style={Registerstyles.registerLabel}>Business name</Text>
                                                 {touched.BusinessName && errors.BusinessName &&
@@ -103,7 +104,7 @@ const Register = (props) => {
                                                     value={BusinessCategory}
                                                     items={items}
                                                     setOpen={setOpenBusinessCategory}
-                                                    containerStyle={{height: 40, marginTop: 10, width : 350 , marginRight : 40}}
+                                                    containerStyle={{height: 40, marginTop: 10, width : 312 , marginRight : 40}}
                                                     setValue={setbusinessCategory}
                                                     setItems={setItems}
                                                     onChangeValue = {()=> {
@@ -127,7 +128,7 @@ const Register = (props) => {
                                                     open={openBusinessSubCategory}
                                                     value={BusinessSubCategory}
                                                     items={items1}
-                                                    containerStyle={{height: 40, marginTop: 10, width : 350 , marginRight : 40}}
+                                                    containerStyle={{height: 40, marginTop: 10, width : 312 , marginRight : 40}}
                                                     setOpen={setOpenBusinessSubCategory}
                                                     setValue={setbusinessSubCategory}
                                                     setItems={setItems1}
@@ -136,10 +137,15 @@ const Register = (props) => {
                                                 />
                                             </View>
                                         </View>
-                                        <Button 
+                                        
+                                    </View>
+                                    <View style={Registerstyles.nextButtonSection}>
+                                    <Button 
                                                 title="Next"
                                                 onPress={handleSubmit} 
+                                                style={Registerstyles.registerButton}
                                         />
+                                    </View>
                                     </View>
                                     )}
                             </Formik>
