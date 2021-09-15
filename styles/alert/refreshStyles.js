@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     },
     calenderText: {
         color: '#fff',
-        marginTop: hp('2%')
+        marginTop: hp('1%'),
+        alignItems: "center"
     },
     btnView: {
         top: hp('2.5%'),
